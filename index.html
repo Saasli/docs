@@ -91,7 +91,7 @@
       <script src="javascripts/all_nosearch.js"></script>
   </head>
 
-  <body class="index" data-languages="[]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -101,6 +101,7 @@
     <div class="tocify-wrapper">
       <img src="images/logo.png" />
         <div class="lang-selector">
+              <a href="#" data-language-name="shell">cURL</a>
         </div>
       <div id="toc">
       </div>
@@ -529,6 +530,12 @@ Within the Account Object you may specify as many field values so long as the ke
 <aside class="notice">
 The only required field on the Account object is Name. If one isn&rsquo;t specified, the newly created account will have the name &lsquo;Unspecified&rsquo;
 </aside>
+<pre class="highlight shell"><code>curl --request POST <span class="se">\</span>
+  --url <span class="s1">''</span> <span class="se">\</span>
+  --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  --header <span class="s1">'x-api-key: 1234567890ABCDEFGHI'</span> <span class="se">\</span>
+  --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_object_id" : "Contact",\n    "sf_field_id" : "unique_field__c",\n    "sf_field_value" : "ABC123456",\n    "event" : {\n        "name" : "Logged In",\n        "logged_at" : 1451606400\n    }\n}'</span>
+</code></pre>
 
 <h2 id="accounts">/Accounts</h2>
 
@@ -614,6 +621,7 @@ The only required field on the Account object is Name. If one isn&rsquo;t specif
       </div>
       <div class="dark-box">
           <div class="lang-selector">
+                <a href="#" data-language-name="shell">cURL</a>
           </div>
       </div>
     </div>
