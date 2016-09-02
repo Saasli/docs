@@ -147,6 +147,17 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 <td>1234567890ABCDEFGHI</td>
 </tr>
 </tbody></table>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"client_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCDEFG1234567"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"sf_object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Contact"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"sf_field_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"unique_field__c"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"sf_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"event"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Logged In"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"logged_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1451606400</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
 <h3 id="body">Body</h3>
 
@@ -165,30 +176,29 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 <tr>
 <td>sf_object_id</td>
 <td>string</td>
-<td>The object within Salesforce that is responsible for the event</td>
+<td>The object within Salesforce that is responsible for the event.</td>
 </tr>
 <tr>
 <td>sf_field_id</td>
 <td>string</td>
-<td>The API name of the field that contains the triggering object&rsquo;s id</td>
+<td>The API name of the field that contains the triggering object&rsquo;s id.</td>
 </tr>
 <tr>
 <td>sf_field_value</td>
 <td>string</td>
-<td>The id value stored in the field specified by sf_field_id</td>
+<td>The id value stored in the field specified by sf_field_id.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name of the event that was performed by the object specified.</td>
+</tr>
+<tr>
+<td>logged_at</td>
+<td>number</td>
+<td>The UNIX timestamp of when said event was performed.</td>
 </tr>
 </tbody></table>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"client_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCDEFG1234567"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"sf_object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Contact"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"sf_field_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"unique_field__c"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"sf_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC123456"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"event"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Logged In"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"logged_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1451606400</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
 
           <h1 id="errors">Errors</h1>
 
