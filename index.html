@@ -153,7 +153,9 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 <p>Name | Data Type | Description
 &mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;
 client_id | string | description
-x-api-key | string | the Saasli provided API Key</p>
+sf_object_id | string | The object within Salesforce that is responsible for the event
+sf_field_id | string | The API name of the field that contains the triggering object&rsquo;s id
+sf_field_value | string | The id value stored in the field specified by sf_field_id</p>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
     </span><span class="nt">"client_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCDEFG1234567"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"sf_object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Contact"</span><span class="p">,</span><span class="w">
