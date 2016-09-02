@@ -118,14 +118,14 @@
 <p>Welcome to the Saasli API! You can use our API to simply interface with your Saasli environment. Contact Sassli to be provisioned an API Key.</p>
 
           <h1 id="events">Events</h1>
+
+<h2 id="event">/Event</h2>
 <pre class="highlight shell"><code>curl --request POST <span class="se">\</span>
   --url <span class="s1">''</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'x-api-key: 1234567890ABCDEFGHI'</span> <span class="se">\</span>
   --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_object_id" : "Contact",\n    "sf_field_id" : "unique_field__c",\n    "sf_field_value" : "ABC123456",\n    "event" : {\n        "name" : "Logged In",\n        "logged_at" : 1451606400\n    }\n}'</span>
 </code></pre>
-
-<h2 id="event">/Event</h2>
 
 <p>This endpoint logs a single event against a single Salesforce object.</p>
 
@@ -206,14 +206,14 @@
 <td>The UNIX timestamp of when said event was performed.</td>
 </tr>
 </tbody></table>
+
+<h2 id="events">/Events</h2>
 <pre class="highlight shell"><code>curl --request POST <span class="se">\</span>
   --url <span class="s1">''</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'x-api-key: 1234567890ABCDEFGHI'</span> <span class="se">\</span>
   --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_object_id" : "Contact",\n    "sf_field_id" : "unique_field__c",\n    "events" : [\n        {\n            "sf_field_value" : "ABC123456",\n            "event" : {\n                "name" : "Logged In",\n                "logged_at" : 1451606400\n            }\n        }\n    ]\n}'</span>
 </code></pre>
-
-<h2 id="events">/Events</h2>
 
 <p>This endpoint logs multiple events against multiple Salesforce objects.</p>
 
@@ -300,14 +300,14 @@
 </tbody></table>
 
           <h1 id="contacts">Contacts</h1>
+
+<h2 id="contact">/Contact</h2>
 <pre class="highlight shell"><code>curl --request POST <span class="se">\</span>
   --url <span class="s1">''</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'x-api-key: 1234567890ABCDEFGHI'</span> <span class="se">\</span>
   --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "contact" : {\n        "sf_field_value" : "ABC123456",\n        "Name" : "John Doe",\n        "Custom_Field_API_Name__c" : "Value"\n    }\n}'</span>
 </code></pre>
-
-<h2 id="contact">/Contact</h2>
 
 <p>This endpoint creates a new Contact within Salesforce with a unique identifier specifed.</p>
 
@@ -385,14 +385,14 @@ Within the Contact Object you may specify as many field values so long as the ke
 <aside class="warning">
 The only required field on the Contact object is LastName. If one isn&rsquo;t specified, the newly created contact will have the last name &lsquo;Unspecified&rsquo;
 </aside>
+
+<h2 id="contacts">/Contacts</h2>
 <pre class="highlight shell"><code>curl --request POST <span class="se">\</span>
   --url <span class="s1">''</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'x-api-key: 1234567890ABCDEFGHI'</span> <span class="se">\</span>
   --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "contacts" : [\n        {\n            "sf_field_value" : "ABC123456",\n            "Name" : "Logged In",\n            "Company" : "ACME",\n            "Custom_Field_API_Name__c" : "Value"\n        }\n    ]\n}'</span>
 </code></pre>
-
-<h2 id="contacts">/Contacts</h2>
 
 <p>This endpoint logs multiple events against multiple Salesforce objects.</p>
 
