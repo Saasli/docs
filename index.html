@@ -475,14 +475,14 @@ The only required field on the Contact object is LastName. If one isn&rsquo;t sp
 </aside>
 
           <h1 id="accounts">Accounts</h1>
+
+<h2 id="account">/Account</h2>
 <pre class="highlight shell"><code>curl --request POST <span class="se">\</span>
   --url <span class="s1">''</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'x-api-key: 1234567890ABCDEFGHI'</span> <span class="se">\</span>
   --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "account" : {\n        "sf_field_value" : "ABC123456",\n        "Name" : "ACME",\n        "Custom_Field_API_Name__c" : "Value"\n    }\n}'</span>
 </code></pre>
-
-<h2 id="account">/Account</h2>
 
 <p>This endpoint creates a new Account within Salesforce with a unique identifier specifed.</p>
 
@@ -561,13 +561,13 @@ Within the Account Object you may specify as many field values so long as the ke
 The only required field on the Account object is Name. If one isn&rsquo;t specified, the newly created account will have the name &lsquo;Unspecified&rsquo;
 </aside>
 
+<h2 id="accounts">/Accounts</h2>
+
 <p>curl &ndash;request POST \
   &ndash;url &ldquo; \
   &ndash;header &#39;content-type: application/json&rsquo; \
   &ndash;header &#39;x-api-key: 1234567890ABCDEFGHI&rsquo; \
   &ndash;data &rsquo;{\n    &quot;client_id&rdquo; : &ldquo;ABCDEFG1234567&rdquo;,\n    &ldquo;sf_field_id&rdquo; : &ldquo;unique_field_<em>c&rdquo;,\n    &ldquo;accounts&rdquo; : [\n        {\n            &ldquo;sf_field_value&rdquo; : &ldquo;ABC123456&rdquo;,\n            &ldquo;Name&rdquo; : &ldquo;ACME&rdquo;,\n            &ldquo;Custom</em>Field_API_Name__c&rdquo; : &ldquo;Value&rdquo;\n        }\n    ]\n}&rsquo;</p>
-
-<h2 id="accounts">/Accounts</h2>
 
 <p>This endpoint creates new Accounts within Salesforce with a unique identifier specifed.</p>
 
