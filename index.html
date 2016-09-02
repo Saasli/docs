@@ -460,21 +460,16 @@ The only required field on the Contact object is LastName. If one isn&rsquo;t sp
 <td>1234567890ABCDEFGHI</td>
 </tr>
 </tbody></table>
-
-<blockquote>
-<p>Body Formatting
-<code class="prettyprint">
-{
-    &quot;client_id&quot; : &quot;ABCDEFG1234567&quot;,
-    &quot;sf_field_id&quot; : &quot;unique_field__c&quot;,
-    &quot;account&quot; : {
-        &quot;sf_field_value&quot; : &quot;ABC123456&quot;,
-        &quot;Name&quot; : &quot;ACME&quot;,
-        &quot;Custom_Field_API_Name__c&quot; : &quot;Value&quot;
-    }
-}
-</code></p>
-</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"client_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCDEFG1234567"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"sf_field_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"unique_field__c"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"account"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"sf_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"Name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ACME"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"Custom_Field_API_Name__c"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Value"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
 <h3 id="body">Body</h3>
 
@@ -542,18 +537,17 @@ The only required field on the Account object is Name. If one isn&rsquo;t specif
 </tbody></table>
 
 <p><code>
-```
-{
-    &quot;client_id&quot; : &quot;ABCDEFG1234567&quot;,
-    &quot;sf_field_id&quot; : &quot;unique_field_<em>c&quot;,
-    &quot;accounts&quot; : [
-        {
-            &quot;sf_field_value&quot; : &quot;ABC123456&quot;,
-            &quot;Name&quot; : &quot;ACME&quot;,
-            &quot;Custom</em>Field_API_Name__c&quot; : &quot;Value&quot;
-        }
-    ]
-}
+{ \n
+    &quot;client_id&quot; : &quot;ABCDEFG1234567&quot;, \n
+    &quot;sf_field_id&quot; : &quot;unique_field_<em>c&quot;, \n
+    &quot;accounts&quot; : [ \n
+        { \n
+            &quot;sf_field_value&quot; : &quot;ABC123456&quot;, \n
+            &quot;Name&quot; : &quot;ACME&quot;, \n
+            &quot;Custom</em>Field_API_Name__c&quot; : &quot;Value&quot; \n
+        } \n
+    ] \n
+} \n
 </code></p>
 
 <h3 id="body">Body</h3>
