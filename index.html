@@ -183,7 +183,7 @@
 <tr>
 <td>sf_object_id</td>
 <td>string</td>
-<td>The object within Salesforce that is responsible for the event.</td>
+<td>The Salesforce API name of the object that is responsible for the event.</td>
 </tr>
 <tr>
 <td>sf_field_id</td>
@@ -340,11 +340,11 @@
     </span><span class="nt">"client_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCDEFG1234567"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"sf_account_field_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Id"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"sf_field_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"unique_field__c"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"sf_account_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"00158000006mkd1AAA"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"sf_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC123456"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"sf_values"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"Name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"Custom_Field_API_Name__c"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Value"</span><span class="w">
+    </span><span class="nt">"contact"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"sf_account_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"00158000006mkd1AAA"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"sf_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"Name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"Custom_Field_API_Name__c"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Value"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -362,11 +362,6 @@
 <td>client_id</td>
 <td>string</td>
 <td>The unique identifier of the Saasli environment the request is destined for.</td>
-</tr>
-<tr>
-<td>sf_object_id</td>
-<td>string</td>
-<td>The object within Salesforce that is responsible for the event.</td>
 </tr>
 <tr>
 <td>sf_account_field_id</td>
@@ -441,10 +436,9 @@ The only required field on the Contact object is LastName. If one isn&rsquo;t sp
         </span><span class="p">{</span><span class="w">
             </span><span class="nt">"sf_account_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"00158000006mkd1AAA"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"sf_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC123456"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"sf_values"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="nt">"Name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span><span class="w">
-              </span><span class="nt">"Custom_Field_API_Name__c"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Value"</span><span class="w">
-            </span><span class="p">}</span><span class="w">
+            </span><span class="nt">"Name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Logged In"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"Company"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ACME"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"Custom_Field_API_Name__c"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Value"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -463,11 +457,6 @@ The only required field on the Contact object is LastName. If one isn&rsquo;t sp
 <td>client_id</td>
 <td>string</td>
 <td>The unique identifier of the Saasli environment the request is destined for.</td>
-</tr>
-<tr>
-<td>sf_object_id</td>
-<td>string</td>
-<td>The object within Salesforce that is responsible for the event.</td>
 </tr>
 <tr>
 <td>sf_account_field_id</td>
@@ -540,7 +529,7 @@ The only required field on the Contact object is LastName. If one isn&rsquo;t sp
     </span><span class="nt">"client_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCDEFG1234567"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"sf_field_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"unique_field__c"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"sf_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC123456"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"sf_values"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"account"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"Name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ACME"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"Custom_Field_API_Name__c"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Value"</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -560,11 +549,6 @@ The only required field on the Contact object is LastName. If one isn&rsquo;t sp
 <td>client_id</td>
 <td>string</td>
 <td>The unique identifier of the Saasli environment the request is destined for.</td>
-</tr>
-<tr>
-<td>sf_object_id</td>
-<td>string</td>
-<td>The object within Salesforce that is responsible for the event.</td>
 </tr>
 <tr>
 <td>sf_field_id</td>
@@ -627,7 +611,7 @@ The only required field on the Account object is Name. If one isn&rsquo;t specif
     </span><span class="nt">"accounts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
         </span><span class="nt">"sf_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC123456"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"sf_values"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"values"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nt">"Name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ACME"</span><span class="p">,</span><span class="w">
           </span><span class="nt">"Custom_Field_API_Name__c"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Value"</span><span class="w">
         </span><span class="p">}</span><span class="w">
@@ -649,11 +633,6 @@ The only required field on the Account object is Name. If one isn&rsquo;t specif
 <td>client_id</td>
 <td>string</td>
 <td>The unique identifier of the Saasli environment the request is destined for.</td>
-</tr>
-<tr>
-<td>sf_object_id</td>
-<td>string</td>
-<td>The object within Salesforce that is responsible for the event.</td>
 </tr>
 <tr>
 <td>sf_field_id</td>
