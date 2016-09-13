@@ -30,7 +30,7 @@ x-api-key |  1234567890ABCDEFGHI
     "client_id" : "ABCDEFG1234567",
     "sf_field_id" : "unique_field__c",
     "sf_field_value" : "ABC123456",
-    "account" : {
+    "sf_values" : {
         "Name" : "ACME",
         "Custom_Field_API_Name__c" : "Value"
     }
@@ -88,7 +88,7 @@ x-api-key |  1234567890ABCDEFGHI
     "accounts" : [
       {
         "sf_field_value" : "ABC123456",
-        "values" : {
+        "sf_values" : {
           "Name" : "ACME",
           "Custom_Field_API_Name__c" : "Value"
         }

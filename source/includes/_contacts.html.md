@@ -30,11 +30,11 @@ x-api-key |  1234567890ABCDEFGHI
     "client_id" : "ABCDEFG1234567",
     "sf_account_field_id" : "Id",
     "sf_field_id" : "unique_field__c",
-    "contact" : {
-        "sf_account_field_value" : "00158000006mkd1AAA",
-        "sf_field_value" : "ABC123456",
-        "Name" : "John Doe",
-        "Custom_Field_API_Name__c" : "Value"
+    "sf_account_field_value" : "00158000006mkd1AAA",
+    "sf_field_value" : "ABC123456",
+    "sf_values" : {
+      "Name" : "John Doe",
+      "Custom_Field_API_Name__c" : "Value"
     }
 }
 ```
@@ -94,9 +94,10 @@ x-api-key |  1234567890ABCDEFGHI
         {
             "sf_account_field_value" : "00158000006mkd1AAA",
             "sf_field_value" : "ABC123456",
-            "Name" : "Logged In",
-            "Company" : "ACME",
-            "Custom_Field_API_Name__c" : "Value"
+            "sf_values" : {
+              "Name" : "John Doe",
+              "Custom_Field_API_Name__c" : "Value"
+            }
         }
     ]
 }
