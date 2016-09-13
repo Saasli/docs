@@ -45,7 +45,6 @@ x-api-key |  1234567890ABCDEFGHI
 Name | Data Type | Description
 --------- | --------- | -----------
 client_id | string | The unique identifier of the Saasli environment the request is destined for.
-sf_object_id | string | The object within Salesforce that is responsible for the event.
 sf_account_field_id | string | The API name of the field on the Contact's Account object that holds the identifer. 
 sf_field_id | string | The Salesforce API name of the field that uniquely identifies the object that triggered the event.
 sf_account_field_value | string | The Id of the Contact's Account stored in the field specified by sf_account_field_id
@@ -107,7 +106,6 @@ x-api-key |  1234567890ABCDEFGHI
 Name | Data Type | Description
 --------- | --------- | -----------
 client_id | string | The unique identifier of the Saasli environment the request is destined for.
-sf_object_id | string | The object within Salesforce that is responsible for the event.
 sf_account_field_id | string | The API name of the field on the Contact's Account object that holds the identifer. 
 sf_field_id | string | The Salesforce API name of the field that uniquely identifies the object that triggered the event.
 sf_account_field_value | string | The Id of the Contact's Account stored in the field specified by sf_account_field_id
