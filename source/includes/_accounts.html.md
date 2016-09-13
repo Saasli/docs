@@ -43,7 +43,6 @@ x-api-key |  1234567890ABCDEFGHI
 Name | Data Type | Description
 --------- | --------- | -----------
 client_id | string | The unique identifier of the Saasli environment the request is destined for.
-sf_object_id | string | The object within Salesforce that is responsible for the event.
 sf_field_id | string | The Salesforce API name of the field that uniquely identifies the object that triggered the event.
 sf_field_value | string | The id value stored in the field specified by sf_field_id.
 
@@ -102,7 +101,6 @@ x-api-key |  1234567890ABCDEFGHI
 Name | Data Type | Description
 --------- | --------- | -----------
 client_id | string | The unique identifier of the Saasli environment the request is destined for.
-sf_object_id | string | The object within Salesforce that is responsible for the event.
 sf_field_id | string | The Salesforce API name of the field that uniquely identifies the object that triggered the event.
 sf_field_value | string | The id value stored in the field specified by sf_field_id.
 
