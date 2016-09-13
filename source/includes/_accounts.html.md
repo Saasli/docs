@@ -29,8 +29,8 @@ x-api-key |  1234567890ABCDEFGHI
 {
     "client_id" : "ABCDEFG1234567",
     "sf_field_id" : "unique_field__c",
+    "sf_field_value" : "ABC123456",
     "account" : {
-        "sf_field_value" : "ABC123456",
         "Name" : "ACME",
         "Custom_Field_API_Name__c" : "Value"
     }
@@ -86,11 +86,13 @@ x-api-key |  1234567890ABCDEFGHI
     "client_id" : "ABCDEFG1234567",
     "sf_field_id" : "unique_field__c",
     "accounts" : [
-        {
-            "sf_field_value" : "ABC123456",
-            "Name" : "ACME",
-            "Custom_Field_API_Name__c" : "Value"
+      {
+        "sf_field_value" : "ABC123456",
+        "values" : {
+          "Name" : "ACME",
+          "Custom_Field_API_Name__c" : "Value"
         }
+      }
     ]
 }
 ```
