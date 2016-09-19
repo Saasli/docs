@@ -7,7 +7,7 @@ curl --request POST \
   --url '' \
   --header 'content-type: application/json' \
   --header 'x-api-key: 1234567890ABCDEFGHI' \
-  --data '{\n    "client_id" : "ABCDEFG1234567",\n    "sf_object_id" : "Contact",\n    "sf_field_id" : "unique_field__c",\n    "sf_field_value" : "ABC123456",\n    "event" : {\n        "name" : "Logged In",\n        "logged_at" : 1451606400\n    }\n}'
+  --data '{\n    "client_id" : "ABCDEFG1234567",\n    "sf_object_id" : "Contact",\n    "sf_field_id" : "unique_field__c",\n    "sf_field_value" : "ABC123456",\n    "event" : {\n        "event_name" : "Logged In",\n        "event_timestamp" : 1451606400\n    }\n}'
 ```
 
 This endpoint logs a single event against a single Salesforce object.
@@ -32,8 +32,8 @@ x-api-key |  1234567890ABCDEFGHI
     "sf_field_id" : "unique_field__c",
     "sf_field_value" : "ABC123456",
     "event" : {
-        "name" : "Logged In",
-        "logged_at" : 1451606400
+        "event_name" : "Logged In",
+        "event_timestamp" : 1451606400
     }
 }
 ```
@@ -46,8 +46,8 @@ client_id | string | The unique identifier of the Saasli environment the request
 sf_object_id | string | This must be either 'Account' or 'Contact'. This specifies which Salesforce object triggered the event.
 sf_field_id | string | The Salesforce API name of the field that uniquely identifies the Account or Contact that triggered the event.
 sf_field_value | string | The value stored by the identifying field, sf_field_id.
-name | string | The name of the event that was performed by the specified Account or Contact.
-logged_at | number | The UNIX timestamp that specifies the time at which the event was performed.
+event_name | string | The name of the event that was performed by the specified Account or Contact.
+event_timestamp | number | The UNIX timestamp that specifies the time at which the event was performed.
 
 
 ## /Events
@@ -57,7 +57,7 @@ curl --request POST \
   --url '' \
   --header 'content-type: application/json' \
   --header 'x-api-key: 1234567890ABCDEFGHI' \
-  --data '{\n    "client_id" : "ABCDEFG1234567",\n    "sf_object_id" : "Contact",\n    "sf_field_id" : "unique_field__c",\n    "events" : [\n        {\n            "sf_field_value" : "ABC123456",\n            "event" : {\n                "name" : "Logged In",\n                "logged_at" : 1451606400\n            }\n        }\n    ]\n}'
+  --data '{\n    "client_id" : "ABCDEFG1234567",\n    "sf_object_id" : "Contact",\n    "sf_field_id" : "unique_field__c",\n    "events" : [\n        {\n            "sf_field_value" : "ABC123456",\n            "event" : {\n                "event_name" : "Logged In",\n                "event_timestamp" : 1451606400\n            }\n        }\n    ]\n}'
 ```
 
 This endpoint logs multiple events against multiple Salesforce objects.
@@ -85,8 +85,8 @@ x-api-key |  1234567890ABCDEFGHI
         {
             "sf_field_value" : "ABC123456",
             "event" : {
-                "name" : "Logged In",
-                "logged_at" : 1451606400
+                "event_name" : "Logged In",
+                "event_timestamp" : 1451606400
             }
         }
     ]
@@ -100,7 +100,7 @@ Name | Data Type | Description
 client_id | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.
 sf_object_id | string | This must be either 'Account' or 'Contact'. This specifies which Salesforce object triggered the event.
 sf_field_id | string | The Salesforce API name of the field that uniquely identifies the Account or Contact that triggered the event.
-sf_field_value | string | TThe value stored by the identifying field, sf_field_id.
-name | string | The name of the event that was performed by the specified Account or Contact.
-logged_at | number | The UNIX timestamp that specifies the time at which the event was performed.
+sf_field_value | string | The value stored by the identifying field, sf_field_id.
+event_name | string | The name of the event that was performed by the specified Account or Contact.
+event_timestamp | number | The UNIX timestamp that specifies the time at which the event was performed.
 
