@@ -10,7 +10,9 @@ curl --request POST \
   --data '{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "contact" : {\n        "sf_field_value" : "ABC123456",\n        "Name" : "John Doe",\n        "Custom_Field_API_Name__c" : "Value"\n    }\n}'
 ```
 
-This endpoint creates a new Contact within Salesforce with a unique identifier specifed.
+This endpoint creates, or updates, a Contact within Salesforce. If a Contact cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Contact will be created with all the attributes defined in the "contact" object in the body of the request. If a Contact is found in Salesforce that does match the identifier, that Contact will be updated with all the attributes defined in the "contact" object.
+
+with a unique identifier specifed.
 
 ### HTTP Request
 
@@ -69,7 +71,7 @@ curl --request POST \
   --data '{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "contacts" : [\n        {\n            "sf_field_value" : "ABC123456",\n            "Name" : "Logged In",\n            "Company" : "ACME",\n            "Custom_Field_API_Name__c" : "Value"\n        }\n    ]\n}'
   ```
 
-This endpoint logs multiple events against multiple Salesforce objects.
+This endpoint creates, or updates, multiple Contacts within Salesforce. If a Contact cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Contact will be created with all the attributes defined in the "contact" object in the body of the request. If a Contact is found in Salesforce that does match the identifier, that Contact will be updated with all the attributes defined in the "contact" object.
 
 ### HTTP Request
 

@@ -10,7 +10,7 @@ curl --request POST \
   --data '{\n    "client_id" : "ABCDEFG1234567",\n    "sf_object_id" : "Contact",\n    "sf_field_id" : "unique_field__c",\n    "sf_field_value" : "ABC123456",\n    "event" : {\n        "event_name" : "Logged In",\n        "event_timestamp" : 1451606400\n    }\n}'
 ```
 
-This endpoint logs a single event against a single Salesforce object.
+This endpoint logs a single event against a single Salesforce object (either an Account or a Contact).
 
 ### HTTP Request
 
@@ -60,7 +60,7 @@ curl --request POST \
   --data '{\n    "client_id" : "ABCDEFG1234567",\n    "sf_object_id" : "Contact",\n    "sf_field_id" : "unique_field__c",\n    "events" : [\n        {\n            "sf_field_value" : "ABC123456",\n            "event" : {\n                "event_name" : "Logged In",\n                "event_timestamp" : 1451606400\n            }\n        }\n    ]\n}'
 ```
 
-This endpoint logs multiple events against multiple Salesforce objects.
+This endpoint logs multiple events against multiple Salesforce objects (either Accounts or Contacts).
 
 ### HTTP Request
 
