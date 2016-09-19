@@ -370,12 +370,12 @@
 <tr>
 <td>sf_account_field_id</td>
 <td>string</td>
-<td>The API name of the field on the Contact&rsquo;s Account object that holds the identifer.</td>
+<td>The Salesforce API name of the Account field that uniquely identifies the Account of the Contact.</td>
 </tr>
 <tr>
 <td>sf_field_id</td>
 <td>string</td>
-<td>The Salesforce API name of the field that uniquely identifies the object that triggered the event.</td>
+<td>The Salesforce API name of the field that uniquely identifies the Contact.</td>
 </tr>
 <tr>
 <td>sf_account_field_value</td>
@@ -396,6 +396,10 @@ Within the Contact Object you may specify as many field values so long as the ke
 <aside class="notice">
 The only required field on the Contact object is LastName. If one isn&rsquo;t specified, the request will return an error.
 <!--If one isn't specified, the newly created contact will have the last name 'Unspecified'.-->
+</aside>
+
+<aside class="notice">
+An sf_account_field_id MUST be provided.
 </aside>
 
 <h2 id="contacts">/Contacts</h2>
@@ -470,17 +474,17 @@ The only required field on the Contact object is LastName. If one isn&rsquo;t sp
 <tr>
 <td>sf_account_field_id</td>
 <td>string</td>
-<td>The API name of the field on the Contact&rsquo;s Account object that holds the identifer.</td>
+<td>The Salesforce API name of the Account field that uniquely identifies the Account of the Contact.</td>
 </tr>
 <tr>
 <td>sf_field_id</td>
 <td>string</td>
-<td>The Salesforce API name of the field that uniquely identifies the object that triggered the event.</td>
+<td>The Salesforce API name of the field that uniquely identifies the Contact.</td>
 </tr>
 <tr>
 <td>sf_account_field_value</td>
 <td>string</td>
-<td>The Id of the Contact&rsquo;s Account stored in the field specified by sf_account_field_id</td>
+<td>The Id of the Contact&rsquo;s Account stored in the field specified by sf_account_field_id.</td>
 </tr>
 <tr>
 <td>sf_field_value</td>
@@ -496,6 +500,10 @@ Within the Contact Object you may specify as many field values so long as the ke
 <aside class="notice">
 The only required field on the Contact object is LastName. If one isn&rsquo;t specified, the request will return an error.
 <!--If one isn't specified, the newly created contact will have the last name 'Unspecified'.-->
+</aside>
+
+<aside class="notice">
+An sf_account_field_id MUST be provided.
 </aside>
 
           <h1 id="accounts-endpoints">Accounts Endpoints</h1>
