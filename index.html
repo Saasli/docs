@@ -115,7 +115,7 @@
       <div class="content">
         <h1 id="introduction">Introduction</h1>
 
-<p>Welcome to the Saasli API! You can use our API to simply interface with your Saasli environment. Contact Saasli to be provisioned an API Key.</p>
+<p>Welcome to the Saasli API! You can use our API to interface with your Saasli environment. Contact Saasli to be provisioned an API Key.</p>
 
           <h1 id="events">Events</h1>
 
@@ -408,9 +408,9 @@ The only required field on the Contact object is LastName. If one isn&rsquo;t sp
 
 <p>This endpoint creates, or updates, multiple Contacts within Salesforce.</p>
 
-<p>If a Contact cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Contact will be created with all the attributes defined in the &ldquo;contact&rdquo; object in the body of the request.</p>
+<p>If a Contact cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Contact will be created with all the attributes defined in the &ldquo;contacts&rdquo; object in the body of the request.</p>
 
-<p>If a Contact is found in Salesforce that matches the identifier, that Contact will be updated with all the attributes defined in the &ldquo;contact&rdquo; object in the body of the request.</p>
+<p>If a Contact is found in Salesforce that matches the identifier, that Contact will be updated with all the attributes defined in the &ldquo;contacts&rdquo; object in the body of the request.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -508,7 +508,11 @@ The only required field on the Contact object is LastName. If one isn&rsquo;t sp
   --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "account" : {\n        "sf_field_value" : "ABC123456",\n        "Name" : "ACME",\n        "Custom_Field_API_Name__c" : "Value"\n    }\n}'</span>
 </code></pre>
 
-<p>This endpoint creates, or updates, an Account within Salesforce. If an Account cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Account will be created with all the attributes defined in the &ldquo;account&rdquo; object in the body of the request. If an Account is found in Salesforce that does match the identifier, that Account will be updated with all the attributes defined in the &ldquo;account&rdquo; object.</p>
+<p>This endpoint creates, or updates, an Account within Salesforce.</p>
+
+<p>If an Account cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Account will be created with all the attributes defined in the &ldquo;account&rdquo; object in the body of the request.</p>
+
+<p>If an Account is found in Salesforce that does match the identifier, that Account will be updated with all the attributes defined in the &ldquo;account&rdquo; object in the body of the request.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -582,13 +586,18 @@ The only required field on the Account object is Name. If one isn&rsquo;t specif
 
 <h2 id="accounts">/Accounts</h2>
 <pre class="highlight shell"><code>curl --request POST <span class="se">\</span>
-  --url <span class="s1">''</span> <span class="se">\</span>
+  --url http:// <span class="se">\</span>
+  --header <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
-  --header <span class="s1">'x-api-key: 1234567890ABCDEFGHI'</span> <span class="se">\</span>
-  --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "accounts" : [\n        {\n            "sf_field_value" : "ABC123456",\n            "Name" : "ACME",\n            "Custom_Field_API_Name__c" : "Value"\n        }\n    ]\n}'</span>
+  --header <span class="s1">'postman-token: d882d1ae-e95e-4803-8cfe-70bee0a87967'</span> <span class="se">\</span>
+  --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "accounts" : [\n      {\n        "sf_field_value" : "ABC123456",\n        "Name" : "ACME",\n        "Custom_Field_API_Name__c" : "Value"\n      }\n    ]\n}'</span>
 </code></pre>
 
-<p>This endpoint creates, or updates, multiple Accounts within Salesforce. If an Account cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Account will be created with all the attributes defined in the &ldquo;account&rdquo; object in the body of the request. If an Account is found in Salesforce that does match the identifier, that Account will be updated with all the attributes defined in the &ldquo;account&rdquo; object.</p>
+<p>This endpoint creates, or updates, multiple Accounts within Salesforce.</p>
+
+<p>If an Account cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Account will be created with all the attributes defined in the &ldquo;accounts&rdquo; object in the body of the request.</p>
+
+<p>If an Account is found in Salesforce that does match the identifier, that Account will be updated with all the attributes defined in the &ldquo;accounts&rdquo; object in the body of the request.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -621,10 +630,8 @@ The only required field on the Account object is Name. If one isn&rsquo;t specif
     </span><span class="nt">"accounts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
         </span><span class="nt">"sf_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC123456"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"values"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"Name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ACME"</span><span class="p">,</span><span class="w">
-          </span><span class="nt">"Custom_Field_API_Name__c"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Value"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
+        </span><span class="nt">"Name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ACME"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"Custom_Field_API_Name__c"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Value"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
