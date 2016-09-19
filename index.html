@@ -387,12 +387,13 @@
 </tr>
 </tbody></table>
 
-<aside class="warning">
+<aside class="notice">
 Within the Contact Object you may specify as many field values so long as the key matches the field&rsquo;s Salesforce API name and the value data type is the same as it is within Salesforce.
 </aside>
 
-<aside class="warning">
-The only required field on the Contact object is LastName. If one isn&rsquo;t specified, the newly created contact will have the last name &lsquo;Unspecified&rsquo;
+<aside class="notice">
+The only required field on the Contact object is LastName. If one isn&rsquo;t specified, the request will return an error.
+<!--If one isn't specified, the newly created contact will have the last name 'Unspecified'.-->
 </aside>
 
 <h2 id="contacts">/Contacts</h2>
@@ -487,7 +488,8 @@ Within the Contact Object you may specify as many field values so long as the ke
 </aside>
 
 <aside class="notice">
-The only required field on the Contact object is LastName. If one isn&rsquo;t specified, the newly created contact will have the last name 'Unspecified&rsquo;
+The only required field on the Contact object is LastName. If one isn&rsquo;t specified, the request will return an error.
+<!--If one isn't specified, the newly created contact will have the last name 'Unspecified'.-->
 </aside>
 
           <h1 id="accounts">Accounts</h1>
