@@ -459,51 +459,14 @@ An sf_account_field_id MUST be provided.
 
 <h3 id="body">Body</h3>
 
-<table><thead>
-<tr>
-<th>Name</th>
-<th></th>
-<th>Data Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>client_id</td>
-<td></td>
-<td>string</td>
-<td>The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.</td>
-</tr>
-<tr>
-<td>sf_account_field_id</td>
-<td></td>
-<td>string</td>
-<td>The Salesforce API name of the Account field that uniquely identifies the Account of the Contact.</td>
-</tr>
-<tr>
-<td>sf_field_id</td>
-<td></td>
-<td>string</td>
-<td>The Salesforce API name of the field that uniquely identifies the Contact.</td>
-</tr>
-<tr>
-<td>contacts</td>
-<td></td>
-<td>object</td>
-<td>The object that contains the array of contact data.</td>
-</tr>
-<tr>
-<td></td>
-<td>sf_account_field_value</td>
-<td>string</td>
-<td>The Id of the Contact&rsquo;s Account stored in the field specified by sf_account_field_id.</td>
-</tr>
-<tr>
-<td></td>
-<td>sf_field_value</td>
-<td>string</td>
-<td>The id value stored in the field specified by sf_field_id.</td>
-</tr>
-</tbody></table>
+<p>Name | | Data Type | Description
+&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&ndash;
+client_id | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.
+sf_account_field_id | string | The Salesforce API name of the Account field that uniquely identifies the Account of the Contact.
+sf_field_id | string | The Salesforce API name of the field that uniquely identifies the Contact.
+contacts | object | The object that contains the array of contact data.
+sf_account_field_value | string | The Id of the Contact&rsquo;s Account stored in the field specified by sf_account_field_id.
+sf_field_value | string | The id value stored in the field specified by sf_field_id.</p>
 
 <aside class="notice">
 Within the Contact Object you may specify as many field values so long as the key matches the field&rsquo;s Salesforce API name and the value data type is the same as it is within Salesforce.
