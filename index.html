@@ -127,7 +127,7 @@
   --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_object_id" : "Contact",\n    "sf_field_id" : "unique_field__c",\n    "sf_field_value" : "ABC123456",\n    "event" : {\n        "event_name" : "Logged In",\n        "event_timestamp" : 1451606400\n    }\n}'</span>
 </code></pre>
 
-<p>This endpoint logs a single event against a single Salesforce object.</p>
+<p>This endpoint logs a single event against a single Salesforce object (either an Account or a Contact).</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -215,7 +215,7 @@
   --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_object_id" : "Contact",\n    "sf_field_id" : "unique_field__c",\n    "events" : [\n        {\n            "sf_field_value" : "ABC123456",\n            "event" : {\n                "event_name" : "Logged In",\n                "event_timestamp" : 1451606400\n            }\n        }\n    ]\n}'</span>
 </code></pre>
 
-<p>This endpoint logs multiple events against multiple Salesforce objects.</p>
+<p>This endpoint logs multiple events against multiple Salesforce objects (either Accounts or Contacts).</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -309,7 +309,9 @@
   --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "contact" : {\n        "sf_field_value" : "ABC123456",\n        "Name" : "John Doe",\n        "Custom_Field_API_Name__c" : "Value"\n    }\n}'</span>
 </code></pre>
 
-<p>This endpoint creates a new Contact within Salesforce with a unique identifier specifed.</p>
+<p>This endpoint creates, or updates, a Contact within Salesforce. If a Contact cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Contact will be created with all the attributes defined in the &ldquo;contact&rdquo; object in the body of the request. If a Contact is found in Salesforce that does match the identifier, that Contact will be updated with all the attributes defined in the &ldquo;contact&rdquo; object.</p>
+
+<p>with a unique identifier specifed.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -401,7 +403,7 @@ The only required field on the Contact object is LastName. If one isn&rsquo;t sp
   --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "contacts" : [\n        {\n            "sf_field_value" : "ABC123456",\n            "Name" : "Logged In",\n            "Company" : "ACME",\n            "Custom_Field_API_Name__c" : "Value"\n        }\n    ]\n}'</span>
 </code></pre>
 
-<p>This endpoint logs multiple events against multiple Salesforce objects.</p>
+<p>This endpoint creates, or updates, multiple Contacts within Salesforce. If a Contact cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Contact will be created with all the attributes defined in the &ldquo;contact&rdquo; object in the body of the request. If a Contact is found in Salesforce that does match the identifier, that Contact will be updated with all the attributes defined in the &ldquo;contact&rdquo; object.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
