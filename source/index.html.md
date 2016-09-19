@@ -18,4 +18,4 @@ search: false
 
 # Introduction
 
-Welcome to the Saasli API! You can use our API to simply interface with your Saasli environment. Contact Saasli to be provisioned an API Key.
+Welcome to the Saasli API! You can use our API to interface with your Saasli environment. Contact Saasli to be provisioned an API Key.
