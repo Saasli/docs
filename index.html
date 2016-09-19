@@ -115,7 +115,7 @@
       <div class="content">
         <h1 id="introduction">Introduction</h1>
 
-<p>Welcome to the Saasli API! You can use our API to simply interface with your Saasli environment. Contact Sassli to be provisioned an API Key.</p>
+<p>Welcome to the Saasli API! You can use our API to simply interface with your Saasli environment. Contact Saasli to be provisioned an API Key.</p>
 
           <h1 id="events">Events</h1>
 
@@ -178,32 +178,32 @@
 <tr>
 <td>client_id</td>
 <td>string</td>
-<td>The unique identifier of the Saasli environment the request is destined for.</td>
+<td>The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.</td>
 </tr>
 <tr>
 <td>sf_object_id</td>
 <td>string</td>
-<td>The Salesforce API name of the object responsible for the event.</td>
+<td>This must be either &lsquo;Account&rsquo; or &#39;Contact&rsquo;. This specifies which Salesforce object triggered the event.</td>
 </tr>
 <tr>
 <td>sf_field_id</td>
 <td>string</td>
-<td>The Salesforce API name of the field that uniquely identifies the object that triggered the event.</td>
+<td>The Salesforce API name of the field that uniquely identifies the Account or Contact that triggered the event.</td>
 </tr>
 <tr>
 <td>sf_field_value</td>
 <td>string</td>
-<td>The id value stored in the field specified by sf_field_id.</td>
+<td>The value stored by the identifying field, sf_field_id.</td>
 </tr>
 <tr>
 <td>name</td>
 <td>string</td>
-<td>The name of the event that was performed by the object specified.</td>
+<td>The name of the event that was performed by the specified Account or Contact.</td>
 </tr>
 <tr>
 <td>logged_at</td>
 <td>number</td>
-<td>The UNIX timestamp of when said event was performed.</td>
+<td>The UNIX timestamp that specifies the time at which the event was performed.</td>
 </tr>
 </tbody></table>
 
@@ -270,32 +270,32 @@
 <tr>
 <td>client_id</td>
 <td>string</td>
-<td>The unique identifier of the Saasli environment the request is destined for.</td>
+<td>The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.</td>
 </tr>
 <tr>
 <td>sf_object_id</td>
 <td>string</td>
-<td>The object within Salesforce that is responsible for the event.</td>
+<td>This must be either &#39;Account&rsquo; or &#39;Contact&rsquo;. This specifies which Salesforce object triggered the event.</td>
 </tr>
 <tr>
 <td>sf_field_id</td>
 <td>string</td>
-<td>The Salesforce API name of the field that uniquely identifies the object that triggered the event.</td>
+<td>The Salesforce API name of the field that uniquely identifies the Account or Contact that triggered the event.</td>
 </tr>
 <tr>
 <td>sf_field_value</td>
 <td>string</td>
-<td>The id value stored in the field specified by sf_field_id.</td>
+<td>TThe value stored by the identifying field, sf_field_id.</td>
 </tr>
 <tr>
 <td>name</td>
 <td>string</td>
-<td>The name of the event that was performed by the object specified.</td>
+<td>The name of the event that was performed by the specified Account or Contact.</td>
 </tr>
 <tr>
 <td>logged_at</td>
 <td>number</td>
-<td>The UNIX timestamp of when said event was performed.</td>
+<td>The UNIX timestamp that specifies the time at which the event was performed.</td>
 </tr>
 </tbody></table>
 
