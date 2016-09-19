@@ -42,12 +42,12 @@ x-api-key |  1234567890ABCDEFGHI
 
 Name | Data Type | Description
 --------- | --------- | -----------
-client_id | string | The unique identifier of the Saasli environment the request is destined for.
-sf_object_id | string | The Salesforce API name of the object responsible for the event.
-sf_field_id | string | The Salesforce API name of the field that uniquely identifies the object that triggered the event.
-sf_field_value | string | The id value stored in the field specified by sf_field_id.
-name | string | The name of the event that was performed by the object specified.
-logged_at | number | The UNIX timestamp of when said event was performed.
+client_id | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.
+sf_object_id | string | This must be either 'Account' or 'Contact'. This specifies which Salesforce object triggered the event.
+sf_field_id | string | The Salesforce API name of the field that uniquely identifies the Account or Contact that triggered the event.
+sf_field_value | string | The value stored by the identifying field, sf_field_id.
+name | string | The name of the event that was performed by the specified Account or Contact.
+logged_at | number | The UNIX timestamp that specifies the time at which the event was performed.
 
 
 ## /Events
@@ -97,10 +97,10 @@ x-api-key |  1234567890ABCDEFGHI
 
 Name | Data Type | Description
 --------- | --------- | -----------
-client_id | string | The unique identifier of the Saasli environment the request is destined for.
-sf_object_id | string | The object within Salesforce that is responsible for the event.
-sf_field_id | string | The Salesforce API name of the field that uniquely identifies the object that triggered the event.
-sf_field_value | string | The id value stored in the field specified by sf_field_id.
-name | string | The name of the event that was performed by the object specified.
-logged_at | number | The UNIX timestamp of when said event was performed.
+client_id | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.
+sf_object_id | string | This must be either 'Account' or 'Contact'. This specifies which Salesforce object triggered the event.
+sf_field_id | string | The Salesforce API name of the field that uniquely identifies the Account or Contact that triggered the event.
+sf_field_value | string | TThe value stored by the identifying field, sf_field_id.
+name | string | The name of the event that was performed by the specified Account or Contact.
+logged_at | number | The UNIX timestamp that specifies the time at which the event was performed.
 
