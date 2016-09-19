@@ -309,7 +309,11 @@
   --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "contact" : {\n        "sf_field_value" : "ABC123456",\n        "Name" : "John Doe",\n        "Custom_Field_API_Name__c" : "Value"\n    }\n}'</span>
 </code></pre>
 
-<p>This endpoint creates, or updates, a Contact within Salesforce. If a Contact cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Contact will be created with all the attributes defined in the &ldquo;contact&rdquo; object in the body of the request. If a Contact is found in Salesforce that does match the identifier, that Contact will be updated with all the attributes defined in the &ldquo;contact&rdquo; object.</p>
+<p>This endpoint creates, or updates, a Contact within Salesforce.</p>
+
+<p>If a Contact cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Contact will be created with all the attributes defined in the &ldquo;contact&rdquo; object in the body of the request.</p>
+
+<p>If a Contact is found in Salesforce that does match the identifier, that Contact will be updated with all the attributes defined in the &ldquo;contact&rdquo; object in the body of the request.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
