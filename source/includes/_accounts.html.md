@@ -7,7 +7,7 @@ curl --request POST \
   --url '' \
   --header 'content-type: application/json' \
   --header 'x-api-key: 1234567890ABCDEFGHI' \
-  --data '{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "account" : {\n        "sf_field_value" : "ABC123456",\n        "Name" : "ACME",\n        "Custom_Field_API_Name__c" : "Value"\n    }\n}'
+  --data '{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "sf_field_value" : "ABC123456",\n    "account" : {\n        "Name" : "ACME",\n\n        "Website" : "https://www.companywebsite.com",\n        "Custom_Field_API_Name__c" : "Value"\n    }\n}'
 ```
 
 This endpoint creates, or updates, an Account within Salesforce.
@@ -36,7 +36,10 @@ Name | Value
     "sf_field_value" : "ABC123456",
     "account" : {
         "Name" : "ACME",
+
+        "Website" : "https://www.companywebsite.com",
         "Custom_Field_API_Name__c" : "Value"
+        etc.
     }
 }
 ```
@@ -68,7 +71,7 @@ curl --request POST \
   --url http:// \
   --header 'cache-control: no-cache' \
   --header 'content-type: application/json' \
-  --data '{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "accounts" : [\n      {\n        "sf_field_value" : "ABC123456",\n        "Name" : "ACME",\n        "Custom_Field_API_Name__c" : "Value"\n      }\n    ]\n}'
+  --data '{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "accounts" : [\n      {\n        "sf_field_value" : "ABC123456",\n        "Name" : "ACME",\n\n        "Website" : "https://www.companywebsite.com",\n        "Custom_Field_API_Name__c" : "Value"\n      }\n    ]\n}'
 ```
 
 This endpoint creates, or updates, multiple Accounts within Salesforce.
@@ -98,7 +101,10 @@ Name | Value
       {
         "sf_field_value" : "ABC123456",
         "Name" : "ACME",
+        
+        "Website" : "https://www.companywebsite.com",
         "Custom_Field_API_Name__c" : "Value"
+        etc.
       }
     ]
 }
