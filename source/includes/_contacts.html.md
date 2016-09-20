@@ -51,19 +51,20 @@ Name | Data Type | Description
 client_id | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.
 sf_account_field_id | string | The API name of the Salesforce Account field that uniquely identifies the Account of the Contact.
 sf_field_id | string | The API name of the Salesforce Contact field that uniquely identifies the Contact.
+contact | object | The object that contains the contact data.
 sf_account_field_value | string | The value stored by the identifying Salesforce Account field, sf_account_field_id.
 sf_field_value | string | The value stored by the identifying Salesforce Contact field, sf_field_id.
 
 
 <aside class="notice">
-Within the Contact Object you may specify as many field values so long as the key matches the field's Salesforce API name and the value data type is the same as it is within Salesforce.
+You may specify as many Salesforce Contact field API names, and their corresponding values, as you would like in the "contact" object in the body of the request, except for the record id field: Id.
 </aside>
-<aside class="notice">
+<aside class="warning">
 The only required field on the Contact object is LastName. If one isn't specified, the request will return an error.
 <!--If one isn't specified, the newly created contact will have the last name 'Unspecified'.-->
 </aside>
-<aside class="notice">
-An sf_account_field_id, and its associated value sf_account_field_value, MUST be provided.
+<aside class="warning">
+An sf_account_field_id, and its associated value sf_account_field_value, <strong>MUST</strong> be provided.
 </aside>
 
 
@@ -126,13 +127,13 @@ sf_account_field_value | string | The value stored by the identifying Salesforce
 sf_field_value | string | The value stored by the identifying Salesforce Contact field, sf_field_id.
 
 <aside class="notice">
-Within the Contact Object you may specify as many field values so long as the key matches the field's Salesforce API name and the value data type is the same as it is within Salesforce.
+You may specify as many Salesforce Contact field API names, and their corresponding values, as you would like in the "contacts" object in the body of the request, except for the record id field: Id.
 </aside>
-<aside class="notice">
+<aside class="warning">
 The only required field on the Contact object is LastName. If one isn't specified, the request will return an error.
 <!--If one isn't specified, the newly created contact will have the last name 'Unspecified'.-->
 </aside>
-<aside class="notice">
-An sf_account_field_id, and its associated value sf_account_field_value, MUST be provided.
+<aside class="warning">
+An sf_account_field_id, and its associated value sf_account_field_value, <strong>MUST</strong> be provided.
 </aside>
 </aside>
