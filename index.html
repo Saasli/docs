@@ -408,7 +408,7 @@ You may specify as many Salesforce Contact field API names, and their correspond
 </aside>
 
 <aside class="warning">
-<i>LastName</i> is a required Salesforce field. If one isn&rsquo;t specified, the request will return an error.
+<i>LastName</i> is a required Salesforce Contact field. If one isn&rsquo;t specified, the request will return an error.
 <!--If one isn't specified, the newly created contact will have the last name 'Unspecified'.-->
 </aside>
 
@@ -525,7 +525,7 @@ You may specify as many Salesforce Contact field API names, and their correspond
 </aside>
 
 <aside class="warning">
-<i>LastName</i> is a required Salesforce field. If one isn&rsquo;t specified, the request will return an error.
+<i>LastName</i> is a required Salesforce Contact field. If one isn&rsquo;t specified, the request will return an error.
 <!--If one isn't specified, the newly created contact will have the last name 'Unspecified'.-->
 </aside>
 
@@ -619,11 +619,12 @@ An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, 
 </tbody></table>
 
 <aside class="notice">
-Within the Account Object you may specify as many field values so long as the key matches the field&rsquo;s Salesforce API name and the value data type is the same as it is within Salesforce.
+You may specify as many Salesforce Account field API names, and their corresponding values, as you would like in the <i>account</i> object in the body of the request, except for the record id field: <i>Id</i>.
 </aside>
 
-<aside class="notice">
-The only required field on the Account object is Name. If one isn&rsquo;t specified, the newly created account will have the name &lsquo;Unspecified&rsquo;
+<aside class="warning">
+<i>Name</i> is a required Salesforce Account field. If one isn&rsquo;t specified, the request will return an error.
+<!--If one isn't specified, the newly created Account will have the name 'Unspecified'.-->
 </aside>
 
 <h2 id="accounts">/Accounts</h2>
@@ -709,12 +710,13 @@ The only required field on the Account object is Name. If one isn&rsquo;t specif
 </tr>
 </tbody></table>
 
-<aside class="warning">
-Within the Account Object you may specify as many field values so long as the key matches the field&rsquo;s Salesforce API name and the value data type is the same as it is within Salesforce.
+<aside class="notice">
+You may specify as many Salesforce Contact field API names, and their corresponding values, as you would like in the <i>accounts</i> object in the body of the request, except for the record id field: <i>Id</i>.
 </aside>
 
 <aside class="warning">
-The only required field on the Account object is Name. If one isn&rsquo;t specified, the newly created account will have the name 'Unspecified&rsquo;
+<i>Name</i> is a required Salesforce Account field. If one isn&rsquo;t specified, the request will return an error.
+<!--If one isn't specified, the newly created Account will have the name 'Unspecified'.-->
 </aside>
 
       </div>
