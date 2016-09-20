@@ -168,44 +168,14 @@
 
 <h3 id="body">Body</h3>
 
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Data Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><em>client_id</em></td>
-<td>string</td>
-<td>The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.</td>
-</tr>
-<tr>
-<td><em>sf_object_id</em></td>
-<td>string</td>
-<td>This must be either &lsquo;Account&rsquo; or &#39;Contact&rsquo;. This specifies the Salesforce object that triggered the event.</td>
-</tr>
-<tr>
-<td><em>sf_field_id</em></td>
-<td>string</td>
-<td>The API name of the Salesforce field that uniquely identifies the Account or Contact that triggered the event.</td>
-</tr>
-<tr>
-<td><em>sf_field_value</em></td>
-<td>string</td>
-<td>The value stored by the identifying Salesforce field, <em>sf_field_id</em>.</td>
-</tr>
-<tr>
-<td><em>event_name</em></td>
-<td>string</td>
-<td>The name of the event that was performed by the specified Account or Contact.</td>
-</tr>
-<tr>
-<td><em>event_timestamp</em></td>
-<td>number</td>
-<td>The UNIX timestamp that specifies the time at which the event was performed.</td>
-</tr>
-</tbody></table>
+<p>Name | Data Type | Description | Required?
+&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&ndash;
+<em>client_id</em> | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you. | Yes
+<em>sf_object_id</em> | string | This must be either &lsquo;Account&rsquo; or &#39;Contact&rsquo;. This specifies the Salesforce object that triggered the event. | Yes
+<em>sf_field_id</em> | string | The API name of the Salesforce field that uniquely identifies the Account or Contact that triggered the event. | Yes
+<em>sf_field_value</em> | string | The value stored by the identifying Salesforce field, <em>sf_field_id</em>. | Yes
+<em>event_name</em> | string | The name of the event that was performed by the specified Account or Contact. | Yes
+<em>event_timestamp</em> | number | The UNIX timestamp that specifies the time at which the event was performed. | Yes</p>
 
 <h2 id="events">/Events</h2>
 <pre class="highlight shell"><code>curl --request POST <span class="se">\</span>
