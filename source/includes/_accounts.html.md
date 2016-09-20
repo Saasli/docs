@@ -101,7 +101,7 @@ Name | Value
       {
         "sf_field_value" : "ABC123456",
         "Name" : "ACME",
-        
+
         "Website" : "https://www.companywebsite.com",
         "Custom_Field_API_Name__c" : "Value"
         etc.
@@ -120,7 +120,7 @@ Name | Data Type | Description
 *Name* | string | The name of the account. This is a required Salesforce field.
 
 <aside class="notice">
-You may specify as many Salesforce Contact field API names, and their corresponding values, as you would like in the <i>accounts</i> object in the body of the request, except for the record id field: <i>Id</i>.
+You may specify as many Salesforce Account field API names, and their corresponding values, as you would like in the <i>accounts</i> object in the body of the request, except for the record id field: <i>Id</i>.
 </aside>
 <aside class="warning">
 <i>Name</i> is a required Salesforce Account field. If one isn't specified, the request will return an error.
