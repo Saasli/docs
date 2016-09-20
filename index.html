@@ -542,7 +542,7 @@ An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, 
   --url <span class="s1">''</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'x-api-key: 1234567890ABCDEFGHI'</span> <span class="se">\</span>
-  --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "account" : {\n        "sf_field_value" : "ABC123456",\n        "Name" : "ACME",\n        "Custom_Field_API_Name__c" : "Value"\n    }\n}'</span>
+  --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "sf_field_value" : "ABC123456",\n    "account" : {\n        "Name" : "ACME",\n\n        "Website" : "https://www.companywebsite.com",\n        "Custom_Field_API_Name__c" : "Value"\n    }\n}'</span>
 </code></pre>
 
 <p>This endpoint creates, or updates, an Account within Salesforce.</p>
@@ -635,7 +635,7 @@ You may specify as many Salesforce Account field API names, and their correspond
   --url http:// <span class="se">\</span>
   --header <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
-  --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "accounts" : [\n      {\n        "sf_field_value" : "ABC123456",\n        "Name" : "ACME",\n        "Custom_Field_API_Name__c" : "Value"\n      }\n    ]\n}'</span>
+  --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "accounts" : [\n      {\n        "sf_field_value" : "ABC123456",\n        "Name" : "ACME",\n\n        "Website" : "https://www.companywebsite.com",\n        "Custom_Field_API_Name__c" : "Value"\n      }\n    ]\n}'</span>
 </code></pre>
 
 <p>This endpoint creates, or updates, multiple Accounts within Salesforce.</p>
