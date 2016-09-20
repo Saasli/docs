@@ -306,7 +306,7 @@
   --url <span class="s1">''</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'x-api-key: 1234567890ABCDEFGHI'</span> <span class="se">\</span>
-  --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "contact" : {\n        "sf_field_value" : "ABC123456",\n        "Name" : "John Doe",\n        "Custom_Field_API_Name__c" : "Value"\n    }\n}'</span>
+  --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_account_field_id" : "Id",\n    "sf_field_id" : "unique_field__c",\n    "contact" : {\n        "sf_account_field_value" : "00158000006mkd1AAA",\n        "sf_field_value" : "ABC123456",\n        "LastName" : "Jones",\n\n        "Name" : "Sam",\n        "Phone" : "+1 123 123 1234",\n        "Custom_Field_API_Name__c" : "Value"\n    }\n}'</span>
 </code></pre>
 
 <p>This endpoint creates, or updates, a Contact within Salesforce.</p>
@@ -421,7 +421,7 @@ An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, 
   --url <span class="s1">''</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'x-api-key: 1234567890ABCDEFGHI'</span> <span class="se">\</span>
-  --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "contacts" : [\n        {\n            "sf_field_value" : "ABC123456",\n            "Name" : "Logged In",\n            "Company" : "ACME",\n            "Custom_Field_API_Name__c" : "Value"\n        }\n    ]\n}'</span>
+  --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_account_field_id" : "Id",\n    "sf_field_id" : "unique_field__c",\n    "contacts" : [\n        {\n            "sf_account_field_value" : "00158000006mkd1AAA",\n            "sf_field_value" : "ABC123456",\n            "LastName" : "Jones",\n\n            "FirstName" : "Sam",\n            "Phone" : "+1 123 123 1234",\n            "Custom_Field_API_Name__c" : "Value"\n        }\n    ]\n}'</span>
 </code></pre>
 
 <p>This endpoint creates, or updates, multiple Contacts within Salesforce.</p>
