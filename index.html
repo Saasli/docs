@@ -142,11 +142,11 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>Content-Type</td>
+<td><em>Content-Type</em></td>
 <td>application/json</td>
 </tr>
 <tr>
-<td>x-api-key</td>
+<td><em>x-api-key</em></td>
 <td>1234567890ABCDEFGHI</td>
 </tr>
 </tbody></table>
@@ -176,32 +176,32 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>client_id</td>
+<td><em>client_id</em></td>
 <td>string</td>
 <td>The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.</td>
 </tr>
 <tr>
-<td>sf_object_id</td>
+<td><em>sf_object_id</em></td>
 <td>string</td>
 <td>This must be either &lsquo;Account&rsquo; or &#39;Contact&rsquo;. This specifies the Salesforce object that triggered the event.</td>
 </tr>
 <tr>
-<td>sf_field_id</td>
+<td><em>sf_field_id</em></td>
 <td>string</td>
 <td>The API name of the Salesforce field that uniquely identifies the Account or Contact that triggered the event.</td>
 </tr>
 <tr>
-<td>sf_field_value</td>
+<td><em>sf_field_value</em></td>
 <td>string</td>
-<td>The value stored by the identifying Salesforce field, sf_field_id.</td>
+<td>The value stored by the identifying Salesforce field, <em>sf_field_id</em>.</td>
 </tr>
 <tr>
-<td>event_name</td>
+<td><em>event_name</em></td>
 <td>string</td>
 <td>The name of the event that was performed by the specified Account or Contact.</td>
 </tr>
 <tr>
-<td>event_timestamp</td>
+<td><em>event_timestamp</em></td>
 <td>number</td>
 <td>The UNIX timestamp that specifies the time at which the event was performed.</td>
 </tr>
@@ -230,11 +230,11 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>Content-Type</td>
+<td><em>Content-Type</em></td>
 <td>application/json</td>
 </tr>
 <tr>
-<td>x-api-key</td>
+<td><em>x-api-key</em></td>
 <td>1234567890ABCDEFGHI</td>
 </tr>
 </tbody></table>
@@ -268,32 +268,32 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>client_id</td>
+<td><em>client_id</em></td>
 <td>string</td>
 <td>The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.</td>
 </tr>
 <tr>
-<td>sf_object_id</td>
+<td><em>sf_object_id</em></td>
 <td>string</td>
 <td>This must be either &#39;Account&rsquo; or &#39;Contact&rsquo;. This specifies the Salesforce object that triggered the event.</td>
 </tr>
 <tr>
-<td>sf_field_id</td>
+<td><em>sf_field_id</em></td>
 <td>string</td>
 <td>The API name of the Salesforce field that uniquely identifies the Account or Contact that triggered the event.</td>
 </tr>
 <tr>
-<td>sf_field_value</td>
+<td><em>sf_field_value</em></td>
 <td>string</td>
-<td>The value stored by the identifying Salesforce field, sf_field_id.</td>
+<td>The value stored by the identifying Salesforce field, <em>sf_field_id</em>.</td>
 </tr>
 <tr>
-<td>event_name</td>
+<td><em>event_name</em></td>
 <td>string</td>
 <td>The name of the event that was performed by the specified Account or Contact.</td>
 </tr>
 <tr>
-<td>event_timestamp</td>
+<td><em>event_timestamp</em></td>
 <td>number</td>
 <td>The UNIX timestamp that specifies the time at which the event was performed.</td>
 </tr>
@@ -547,9 +547,9 @@ An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, 
 
 <p>This endpoint creates, or updates, an Account within Salesforce.</p>
 
-<p>If an Account cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Account will be created with all the attributes defined in the &ldquo;account&rdquo; object in the body of the request.</p>
+<p>If an Account cannot be found in Salesforce that matches the idenifier you specify (<em>sf_field_id</em>), a new Account will be created with all the attributes defined in the <em>account</em> object in the body of the request.</p>
 
-<p>If an Account is found in Salesforce that does match the identifier, that Account will be updated with all the attributes defined in the &ldquo;account&rdquo; object in the body of the request.</p>
+<p>If an Account is found in Salesforce that does match the identifier, that Account will be updated with all the attributes defined in the <em>account</em> object in the body of the request.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -564,11 +564,11 @@ An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, 
 </tr>
 </thead><tbody>
 <tr>
-<td>Content-Type</td>
+<td><em>Content-Type</em></td>
 <td>application/json</td>
 </tr>
 <tr>
-<td>x-api-key</td>
+<td><em>x-api-key</em></td>
 <td>1234567890ABCDEFGHI</td>
 </tr>
 </tbody></table>
@@ -597,19 +597,24 @@ An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, 
 </tr>
 </thead><tbody>
 <tr>
-<td>client_id</td>
+<td><em>client_id</em></td>
 <td>string</td>
 <td>The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.</td>
 </tr>
 <tr>
-<td>sf_field_id</td>
+<td><em>sf_field_id</em></td>
 <td>string</td>
 <td>The API name of the Salesforce Account field that uniquely identifies the Account.</td>
 </tr>
 <tr>
-<td>sf_field_value</td>
+<td><em>sf_field_value</em></td>
 <td>string</td>
-<td>The value stored by the identifying Salesforce Account field, sf_field_id.</td>
+<td>The value stored by the identifying Salesforce Account field, <em>sf_field_id</em>.</td>
+</tr>
+<tr>
+<td><em>Name</em></td>
+<td>string</td>
+<td>The name of the account. This is a required Salesforce field.</td>
 </tr>
 </tbody></table>
 
@@ -631,9 +636,9 @@ The only required field on the Account object is Name. If one isn&rsquo;t specif
 
 <p>This endpoint creates, or updates, multiple Accounts within Salesforce.</p>
 
-<p>If an Account cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Account will be created with all the attributes defined in the &ldquo;accounts&rdquo; object in the body of the request.</p>
+<p>If an Account cannot be found in Salesforce that matches the idenifier you specify (<em>sf_field_id</em>), a new Account will be created with all the attributes defined in the <em>accounts</em> object in the body of the request.</p>
 
-<p>If an Account is found in Salesforce that does match the identifier, that Account will be updated with all the attributes defined in the &ldquo;accounts&rdquo; object in the body of the request.</p>
+<p>If an Account is found in Salesforce that does match the identifier, that Account will be updated with all the attributes defined in the <em>accounts</em> object in the body of the request.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -648,11 +653,11 @@ The only required field on the Account object is Name. If one isn&rsquo;t specif
 </tr>
 </thead><tbody>
 <tr>
-<td>Content-Type</td>
+<td><em>Content-Type</em></td>
 <td>application/json</td>
 </tr>
 <tr>
-<td>x-api-key</td>
+<td><em>x-api-key</em></td>
 <td>1234567890ABCDEFGHI</td>
 </tr>
 </tbody></table>
@@ -683,19 +688,24 @@ The only required field on the Account object is Name. If one isn&rsquo;t specif
 </tr>
 </thead><tbody>
 <tr>
-<td>client_id</td>
+<td><em>client_id</em></td>
 <td>string</td>
 <td>The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.</td>
 </tr>
 <tr>
-<td>sf_field_id</td>
+<td><em>sf_field_id</em></td>
 <td>string</td>
 <td>The API name of the Salesforce Account field that uniquely identifies the Account.</td>
 </tr>
 <tr>
-<td>sf_field_value</td>
+<td><em>sf_field_value</em></td>
 <td>string</td>
-<td>The value stored by the identifying Salesforce Account field, sf_field_id.</td>
+<td>The value stored by the identifying Salesforce Account field, <em>sf_field_id</em>.</td>
+</tr>
+<tr>
+<td><em>Name</em></td>
+<td>string</td>
+<td>The name of the account. This is a required Salesforce field.</td>
 </tr>
 </tbody></table>
 
