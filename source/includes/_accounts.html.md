@@ -12,9 +12,9 @@ curl --request POST \
 
 This endpoint creates, or updates, an Account within Salesforce.
 
-If an Account cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Account will be created with all the attributes defined in the "account" object in the body of the request.
+If an Account cannot be found in Salesforce that matches the idenifier you specify (*sf_field_id*), a new Account will be created with all the attributes defined in the *account* object in the body of the request.
 
-If an Account is found in Salesforce that does match the identifier, that Account will be updated with all the attributes defined in the "account" object in the body of the request.
+If an Account is found in Salesforce that does match the identifier, that Account will be updated with all the attributes defined in the *account* object in the body of the request.
 
 ### HTTP Request
 
@@ -24,8 +24,8 @@ If an Account is found in Salesforce that does match the identifier, that Accoun
 
 Name | Value
 --------- | ------- 
-Content-Type | application/json
-x-api-key |  1234567890ABCDEFGHI
+*Content-Type* | application/json
+*x-api-key* |  1234567890ABCDEFGHI
 
 > Sample Body
 
@@ -46,15 +46,17 @@ x-api-key |  1234567890ABCDEFGHI
 
 Name | Data Type | Description
 --------- | --------- | -----------
-client_id | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.
-sf_field_id | string | The API name of the Salesforce Account field that uniquely identifies the Account.
-sf_field_value | string | The value stored by the identifying Salesforce Account field, sf_field_id.
+*client_id* | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.
+*sf_field_id* | string | The API name of the Salesforce Account field that uniquely identifies the Account.
+*sf_field_value* | string | The value stored by the identifying Salesforce Account field, *sf_field_id*.
+*Name* | string | The name of the account. This is a required Salesforce field.
 
 <aside class="notice">
-Within the Account Object you may specify as many field values so long as the key matches the field's Salesforce API name and the value data type is the same as it is within Salesforce.
+You may specify as many Salesforce Account field API names, and their corresponding values, as you would like in the <i>account</i> object in the body of the request, except for the record id field: <i>Id</i>.
 </aside>
-<aside class="notice">
-The only required field on the Account object is Name. If one isn't specified, the newly created account will have the name 'Unspecified'
+<aside class="warning">
+<i>Name</i> is a required Salesforce Account field. If one isn't specified, the request will return an error.
+<!--If one isn't specified, the newly created Account will have the name 'Unspecified'.-->
 </aside>
 
 
@@ -71,9 +73,9 @@ curl --request POST \
 
 This endpoint creates, or updates, multiple Accounts within Salesforce.
 
-If an Account cannot be found in Salesforce that matches the idenifier you specify (sf_field_id), a new Account will be created with all the attributes defined in the "accounts" object in the body of the request.
+If an Account cannot be found in Salesforce that matches the idenifier you specify (*sf_field_id*), a new Account will be created with all the attributes defined in the *accounts* object in the body of the request.
 
-If an Account is found in Salesforce that does match the identifier, that Account will be updated with all the attributes defined in the "accounts" object in the body of the request.
+If an Account is found in Salesforce that does match the identifier, that Account will be updated with all the attributes defined in the *accounts* object in the body of the request.
 
 ### HTTP Request
 
@@ -83,8 +85,8 @@ If an Account is found in Salesforce that does match the identifier, that Accoun
 
 Name | Value
 --------- | ------- 
-Content-Type | application/json
-x-api-key |  1234567890ABCDEFGHI
+*Content-Type* | application/json
+*x-api-key* |  1234567890ABCDEFGHI
 
 > Sample Body
 
@@ -106,13 +108,15 @@ x-api-key |  1234567890ABCDEFGHI
 
 Name | Data Type | Description
 --------- | --------- | -----------
-client_id | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.
-sf_field_id | string | The API name of the Salesforce Account field that uniquely identifies the Account.
-sf_field_value | string | The value stored by the identifying Salesforce Account field, sf_field_id.
+*client_id* | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.
+*sf_field_id* | string | The API name of the Salesforce Account field that uniquely identifies the Account.
+*sf_field_value* | string | The value stored by the identifying Salesforce Account field, *sf_field_id*.
+*Name* | string | The name of the account. This is a required Salesforce field.
 
-<aside class="warning">
-Within the Account Object you may specify as many field values so long as the key matches the field's Salesforce API name and the value data type is the same as it is within Salesforce.
+<aside class="notice">
+You may specify as many Salesforce Contact field API names, and their corresponding values, as you would like in the <i>accounts</i> object in the body of the request, except for the record id field: <i>Id</i>.
 </aside>
 <aside class="warning">
-The only required field on the Account object is Name. If one isn't specified, the newly created account will have the name 'Unspecified'
+<i>Name</i> is a required Salesforce Account field. If one isn't specified, the request will return an error.
+<!--If one isn't specified, the newly created Account will have the name 'Unspecified'.-->
 </aside>
