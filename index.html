@@ -139,15 +139,18 @@
 <tr>
 <th>Name</th>
 <th>Value</th>
+<th>Required?</th>
 </tr>
 </thead><tbody>
 <tr>
 <td><em>Content-Type</em></td>
 <td>application/json</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>x-api-key</em></td>
 <td>1234567890ABCDEFGHI</td>
+<td>Yes</td>
 </tr>
 </tbody></table>
 
@@ -234,15 +237,18 @@
 <tr>
 <th>Name</th>
 <th>Value</th>
+<th>Required?</th>
 </tr>
 </thead><tbody>
 <tr>
 <td><em>Content-Type</em></td>
 <td>application/json</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>x-api-key</em></td>
 <td>1234567890ABCDEFGHI</td>
+<td>Yes</td>
 </tr>
 </tbody></table>
 
@@ -272,37 +278,44 @@
 <th>Name</th>
 <th>Data Type</th>
 <th>Description</th>
+<th>Required?</th>
 </tr>
 </thead><tbody>
 <tr>
 <td><em>client_id</em></td>
 <td>string</td>
 <td>The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>sf_object_id</em></td>
 <td>string</td>
 <td>This must be either &#39;Account&rsquo; or &#39;Contact&rsquo;. This specifies the Salesforce object that triggered the event.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>sf_field_id</em></td>
 <td>string</td>
 <td>The API name of the Salesforce field that uniquely identifies the Account or Contact that triggered the event.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>sf_field_value</em></td>
 <td>string</td>
 <td>The value stored by the identifying Salesforce field, <em>sf_field_id</em>.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>event_name</em></td>
 <td>string</td>
 <td>The name of the event that was performed by the specified Account or Contact.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>event_timestamp</em></td>
 <td>number</td>
 <td>The UNIX timestamp that specifies the time at which the event was performed.</td>
+<td>Yes</td>
 </tr>
 </tbody></table>
 
@@ -332,15 +345,18 @@
 <tr>
 <th>Name</th>
 <th>Value</th>
+<th>Required?</th>
 </tr>
 </thead><tbody>
 <tr>
 <td><em>Content-Type</em></td>
 <td>application/json</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>x-api-key</em></td>
 <td>1234567890ABCDEFGHI</td>
+<td>Yes</td>
 </tr>
 </tbody></table>
 
@@ -371,42 +387,50 @@
 <th>Name</th>
 <th>Data Type</th>
 <th>Description</th>
+<th>Required?</th>
 </tr>
 </thead><tbody>
 <tr>
 <td><em>client_id</em></td>
 <td>string</td>
 <td>The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>sf_account_field_id</em></td>
 <td>string</td>
 <td>The API name of the Salesforce Account field that uniquely identifies the Account of the Contact.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>sf_field_id</em></td>
 <td>string</td>
 <td>The API name of the Salesforce Contact field that uniquely identifies the Contact.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>contact</em></td>
 <td>object</td>
 <td>The object in the request that contains the contact data.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>sf_account_field_value</em></td>
 <td>string</td>
 <td>The value stored by the identifying Salesforce Account field, <em>sf_account_field_id</em>.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>sf_field_value</em></td>
 <td>string</td>
 <td>The value stored by the identifying Salesforce Contact field, <em>sf_field_id</em>.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>LastName</em></td>
 <td>string</td>
 <td>The last name of the contact. This is a required Salesforce field.</td>
+<td>Yes</td>
 </tr>
 </tbody></table>
 
@@ -447,15 +471,18 @@ An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, 
 <tr>
 <th>Name</th>
 <th>Value</th>
+<th>Required?</th>
 </tr>
 </thead><tbody>
 <tr>
 <td><em>Content-Type</em></td>
 <td>application/json</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>x-api-key</em></td>
 <td>1234567890ABCDEFGHI</td>
+<td>Yes</td>
 </tr>
 </tbody></table>
 
@@ -488,42 +515,50 @@ An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, 
 <th>Name</th>
 <th>Data Type</th>
 <th>Description</th>
+<th>Required?</th>
 </tr>
 </thead><tbody>
 <tr>
 <td><em>client_id</em></td>
 <td>string</td>
 <td>The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>sf_account_field_id</em></td>
 <td>string</td>
 <td>The API name of the Salesforce Account field that uniquely identifies the Account of the Contact.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>sf_field_id</em></td>
 <td>string</td>
 <td>The API name of the Salesforce Contact field that uniquely identifies the Contact.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>contacts</em></td>
 <td>object</td>
 <td>The object in the request that contains the array of contact data.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>sf_account_field_value</em></td>
 <td>string</td>
 <td>The value stored by the identifying Salesforce Account field, <em>sf_account_field_id</em>.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>sf_field_value</em></td>
 <td>string</td>
 <td>The value stored by the identifying Salesforce Contact field, <em>sf_field_id</em>.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>LastName</em></td>
 <td>string</td>
 <td>The last name of the contact. This is a required Salesforce field.</td>
+<td>Yes</td>
 </tr>
 </tbody></table>
 
@@ -568,15 +603,18 @@ An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, 
 <tr>
 <th>Name</th>
 <th>Value</th>
+<th>Required?</th>
 </tr>
 </thead><tbody>
 <tr>
 <td><em>Content-Type</em></td>
 <td>application/json</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>x-api-key</em></td>
 <td>1234567890ABCDEFGHI</td>
+<td>Yes</td>
 </tr>
 </tbody></table>
 
@@ -604,27 +642,32 @@ An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, 
 <th>Name</th>
 <th>Data Type</th>
 <th>Description</th>
+<th>Required?</th>
 </tr>
 </thead><tbody>
 <tr>
 <td><em>client_id</em></td>
 <td>string</td>
 <td>The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>sf_field_id</em></td>
 <td>string</td>
 <td>The API name of the Salesforce Account field that uniquely identifies the Account.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>sf_field_value</em></td>
 <td>string</td>
 <td>The value stored by the identifying Salesforce Account field, <em>sf_field_id</em>.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>Name</em></td>
 <td>string</td>
 <td>The name of the account. This is a required Salesforce field.</td>
+<td>Yes</td>
 </tr>
 </tbody></table>
 
@@ -661,15 +704,18 @@ You may specify as many Salesforce Account field API names, and their correspond
 <tr>
 <th>Name</th>
 <th>Value</th>
+<th>Required?</th>
 </tr>
 </thead><tbody>
 <tr>
 <td><em>Content-Type</em></td>
 <td>application/json</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>x-api-key</em></td>
 <td>1234567890ABCDEFGHI</td>
+<td>Yes</td>
 </tr>
 </tbody></table>
 
@@ -699,27 +745,32 @@ You may specify as many Salesforce Account field API names, and their correspond
 <th>Name</th>
 <th>Data Type</th>
 <th>Description</th>
+<th>Required?</th>
 </tr>
 </thead><tbody>
 <tr>
 <td><em>client_id</em></td>
 <td>string</td>
 <td>The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>sf_field_id</em></td>
 <td>string</td>
 <td>The API name of the Salesforce Account field that uniquely identifies the Account.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>sf_field_value</em></td>
 <td>string</td>
 <td>The value stored by the identifying Salesforce Account field, <em>sf_field_id</em>.</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><em>Name</em></td>
 <td>string</td>
 <td>The name of the account. This is a required Salesforce field.</td>
+<td>Yes</td>
 </tr>
 </tbody></table>
 
