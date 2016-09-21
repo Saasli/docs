@@ -22,10 +22,10 @@ If a Contact is found in Salesforce that matches the identifier, that Contact wi
 
 ### Headers
 
-Name | Value
---------- | ------- 
-*Content-Type* | application/json
-*x-api-key* |  1234567890ABCDEFGHI
+Name | Value | Required?
+--------- | ------- | --------- 
+*Content-Type* | application/json | Yes
+*x-api-key* |  1234567890ABCDEFGHI | Yes
 
 > Sample Body
 
@@ -50,15 +50,15 @@ Name | Value
 
 ### Body
 
-Name | Data Type | Description
---------- | --------- | -----------
-*client_id* | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.
-*sf_account_field_id* | string | The API name of the Salesforce Account field that uniquely identifies the Account of the Contact.
-*sf_field_id* | string | The API name of the Salesforce Contact field that uniquely identifies the Contact.
-*contact* | object | The object in the request that contains the contact data.
-*sf_account_field_value* | string | The value stored by the identifying Salesforce Account field, *sf_account_field_id*.
-*sf_field_value* | string | The value stored by the identifying Salesforce Contact field, *sf_field_id*.
-*LastName* | string | The last name of the contact. This is a required Salesforce field.
+Name | Data Type | Description | Required?
+--------- | --------- | ----------- | --------- 
+*client_id* | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you. | Yes
+*sf_account_field_id* | string | The API name of the Salesforce Account field that uniquely identifies the Account of the Contact. | Yes
+*sf_field_id* | string | The API name of the Salesforce Contact field that uniquely identifies the Contact. | Yes
+*contact* | object | The object in the request that contains the contact data. | Yes
+*sf_account_field_value* | string | The value stored by the identifying Salesforce Account field, *sf_account_field_id*. | Yes
+*sf_field_value* | string | The value stored by the identifying Salesforce Contact field, *sf_field_id*. | Yes
+*LastName* | string | The last name of the contact. This is a required Salesforce field. | Yes
 
 
 <aside class="notice">
@@ -96,10 +96,10 @@ If a Contact is found in Salesforce that matches the identifier, that Contact wi
 
 ### Headers
 
-Name | Value
---------- | ------- 
-*Content-Type* | application/json
-*x-api-key* |  1234567890ABCDEFGHI
+Name | Value | Required?
+--------- | ------- | --------- 
+*Content-Type* | application/json | Yes
+*x-api-key* |  1234567890ABCDEFGHI | Yes
 
 > Sample Body
 
@@ -125,15 +125,15 @@ Name | Value
 
 ### Body
 
-Name | Data Type | Description
---------- | --------- | -----------
-*client_id* | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.
-*sf_account_field_id* | string | The API name of the Salesforce Account field that uniquely identifies the Account of the Contact.
-*sf_field_id* | string | The API name of the Salesforce Contact field that uniquely identifies the Contact.
-*contacts* | object | The object in the request that contains the array of contact data.
-*sf_account_field_value* | string | The value stored by the identifying Salesforce Account field, *sf_account_field_id*.
-*sf_field_value* | string | The value stored by the identifying Salesforce Contact field, *sf_field_id*.
-*LastName* | string | The last name of the contact. This is a required Salesforce field.
+Name | Data Type | Description | Required?
+--------- | --------- | ----------- | --------- 
+*client_id* | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you. | Yes
+*sf_account_field_id* | string | The API name of the Salesforce Account field that uniquely identifies the Account of the Contact. | Yes
+*sf_field_id* | string | The API name of the Salesforce Contact field that uniquely identifies the Contact. | Yes
+*contacts* | object | The object in the request that contains the array of contact data. | Yes
+*sf_account_field_value* | string | The value stored by the identifying Salesforce Account field, *sf_account_field_id*. | Yes
+*sf_field_value* | string | The value stored by the identifying Salesforce Contact field, *sf_field_id*. | Yes
+*LastName* | string | The last name of the contact. This is a required Salesforce field. | Yes
 
 <aside class="notice">
 You may specify as many Salesforce Contact field API names, and their corresponding values, as you would like in the <i>contacts</i> object in the body of the request, except for the record id field: <i>Id</i>.

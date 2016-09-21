@@ -18,10 +18,10 @@ This endpoint logs a single event against a single Salesforce object (either an 
 
 ### Headers
 
-Name | Value
---------- | ------- 
-*Content-Type* | application/json
-*x-api-key* |  1234567890ABCDEFGHI
+Name | Value | Required?
+--------- | ------- | --------- 
+*Content-Type* | application/json | Yes
+*x-api-key* |  1234567890ABCDEFGHI | Yes
 
 > Sample Body
 
@@ -40,14 +40,14 @@ Name | Value
 
 ### Body
 
-Name | Data Type | Description
---------- | --------- | -----------
-*client_id* | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.
-*sf_object_id* | string | This must be either 'Account' or 'Contact'. This specifies the Salesforce object that triggered the event.
-*sf_field_id* | string | The API name of the Salesforce field that uniquely identifies the Account or Contact that triggered the event.
-*sf_field_value* | string | The value stored by the identifying Salesforce field, *sf_field_id*.
-*event_name* | string | The name of the event that was performed by the specified Account or Contact.
-*event_timestamp* | number | The UNIX timestamp that specifies the time at which the event was performed.
+Name | Data Type | Description | Required?
+--------- | --------- | ----------- | --------- 
+*client_id* | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you. | Yes
+*sf_object_id* | string | This must be either 'Account' or 'Contact'. This specifies the Salesforce object that triggered the event. | Yes
+*sf_field_id* | string | The API name of the Salesforce field that uniquely identifies the Account or Contact that triggered the event. | Yes
+*sf_field_value* | string | The value stored by the identifying Salesforce field, *sf_field_id*. | Yes
+*event_name* | string | The name of the event that was performed by the specified Account or Contact. | Yes
+*event_timestamp* | number | The UNIX timestamp that specifies the time at which the event was performed. | Yes
 
 
 ## /Events
@@ -68,10 +68,10 @@ This endpoint logs multiple events against multiple Salesforce objects (either A
 
 ### Headers
 
-Name | Value
---------- | ------- 
-*Content-Type* | application/json
-*x-api-key* |  1234567890ABCDEFGHI
+Name | Value | Required?
+--------- | ------- | --------- 
+*Content-Type* | application/json | Yes
+*x-api-key* |  1234567890ABCDEFGHI | Yes
 
 
 > Sample Body
@@ -95,12 +95,12 @@ Name | Value
 
 ### Body
 
-Name | Data Type | Description
---------- | --------- | -----------
-*client_id* | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.
-*sf_object_id* | string | This must be either 'Account' or 'Contact'. This specifies the Salesforce object that triggered the event.
-*sf_field_id* | string | The API name of the Salesforce field that uniquely identifies the Account or Contact that triggered the event.
-*sf_field_value* | string | The value stored by the identifying Salesforce field, *sf_field_id*.
-*event_name* | string | The name of the event that was performed by the specified Account or Contact.
-*event_timestamp* | number | The UNIX timestamp that specifies the time at which the event was performed.
+Name | Data Type | Description | Required?
+--------- | --------- | ----------- | --------- 
+*client_id* | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you. | Yes
+*sf_object_id* | string | This must be either 'Account' or 'Contact'. This specifies the Salesforce object that triggered the event. | Yes
+*sf_field_id* | string | The API name of the Salesforce field that uniquely identifies the Account or Contact that triggered the event. | Yes
+*sf_field_value* | string | The value stored by the identifying Salesforce field, *sf_field_id*. | Yes
+*event_name* | string | The name of the event that was performed by the specified Account or Contact. | Yes
+*event_timestamp* | number | The UNIX timestamp that specifies the time at which the event was performed. | Yes
 

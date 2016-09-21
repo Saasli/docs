@@ -22,10 +22,10 @@ If an Account is found in Salesforce that does match the identifier, that Accoun
 
 ### Headers
 
-Name | Value
---------- | ------- 
-*Content-Type* | application/json
-*x-api-key* |  1234567890ABCDEFGHI
+Name | Value | Required?
+--------- | ------- | --------- 
+*Content-Type* | application/json | Yes
+*x-api-key* |  1234567890ABCDEFGHI | Yes
 
 > Sample Body
 
@@ -47,12 +47,12 @@ Name | Value
 
 ### Body
 
-Name | Data Type | Description
---------- | --------- | -----------
-*client_id* | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.
-*sf_field_id* | string | The API name of the Salesforce Account field that uniquely identifies the Account.
-*sf_field_value* | string | The value stored by the identifying Salesforce Account field, *sf_field_id*.
-*Name* | string | The name of the account. This is a required Salesforce field.
+Name | Data Type | Description | Required?
+--------- | --------- | ----------- | --------- 
+*client_id* | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you. | Yes
+*sf_field_id* | string | The API name of the Salesforce Account field that uniquely identifies the Account. | Yes
+*sf_field_value* | string | The value stored by the identifying Salesforce Account field, *sf_field_id*. | Yes
+*Name* | string | The name of the account. This is a required Salesforce field. | Yes
 
 <aside class="notice">
 You may specify as many Salesforce Account field API names, and their corresponding values, as you would like in the <i>account</i> object in the body of the request, except for the record id field: <i>Id</i>.
@@ -86,10 +86,10 @@ If an Account is found in Salesforce that does match the identifier, that Accoun
 
 ### Headers
 
-Name | Value
---------- | ------- 
-*Content-Type* | application/json
-*x-api-key* |  1234567890ABCDEFGHI
+Name | Value | Required?
+--------- | ------- | --------- 
+*Content-Type* | application/json | Yes
+*x-api-key* |  1234567890ABCDEFGHI | Yes
 
 > Sample Body
 
@@ -112,12 +112,12 @@ Name | Value
 
 ### Body
 
-Name | Data Type | Description
---------- | --------- | -----------
-*client_id* | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you.
-*sf_field_id* | string | The API name of the Salesforce Account field that uniquely identifies the Account.
-*sf_field_value* | string | The value stored by the identifying Salesforce Account field, *sf_field_id*.
-*Name* | string | The name of the account. This is a required Salesforce field.
+Name | Data Type | Description | Required?
+--------- | --------- | ----------- | --------- 
+*client_id* | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you. | Yes
+*sf_field_id* | string | The API name of the Salesforce Account field that uniquely identifies the Account. | Yes
+*sf_field_value* | string | The value stored by the identifying Salesforce Account field, *sf_field_id*. | Yes
+*Name* | string | The name of the account. This is a required Salesforce field. | Yes
 
 <aside class="notice">
 You may specify as many Salesforce Account field API names, and their corresponding values, as you would like in the <i>accounts</i> object in the body of the request, except for the record id field: <i>Id</i>.
