@@ -14,7 +14,7 @@ This endpoint logs a single event against a single Salesforce object (either an 
 
 ### HTTP Request
 
-`POST <Endpoint to be provisioned>`
+`POST https://api.saasli.com/v1/event`
 
 ### Headers
 

@@ -18,7 +18,7 @@ If an Account is found in Salesforce that does match the identifier, that Accoun
 
 ### HTTP Request
 
-`POST <Endpoint to be provisioned>`
+`POST https://api.saasli.com/v1/accounts`
 
 ### Headers
 
@@ -33,10 +33,9 @@ Name | Value | Required?
 {
     "client_id" : "ABCDEFG1234567",
     "sf_field_id" : "unique_field__c",
-    "sf_field_value" : "ABC123456",
-    "sf_values" : {
+    "account" : {
         "Name" : "ACME",
-
+        "sf_field_value" : "ABC123456",
         "Website" : "https://www.companywebsite.com",
         "Custom_Field_API_Name__c" : "Value"
         etc.

@@ -18,7 +18,7 @@ If a Contact is found in Salesforce that matches the identifier, that Contact wi
 
 ### HTTP Request
 
-`POST <Endpoint to be provisioned>`
+`POST https://api.saasli.com/v1/contact`
 
 ### Headers
 
@@ -38,8 +38,7 @@ Name | Value | Required?
         "sf_account_field_value" : "00158000006mkd1AAA",
         "sf_field_value" : "ABC123456",
         "LastName" : "Jones",
-
-        "Name" : "Sam",
+        "FirstName" : "Sam",
         "Phone" : "+1 123 123 1234",
         "Custom_Field_API_Name__c" : "Value"
         etc.
