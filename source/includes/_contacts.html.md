@@ -18,7 +18,7 @@ If a Contact is found in Salesforce that matches the identifier, that Contact wi
 
 ### HTTP Request
 
-`POST https://api.saasli.com/v1/contact`
+`POST https://api.saasli.com/v1/contact/{account_id_field}/{contact_id_field}`
 
 ### Headers
 
@@ -27,16 +27,19 @@ Name | Value | Required?
 *Content-Type* | application/json | Yes
 *x-api-key* |  1234567890ABCDEFGHI | Yes
 
+### URL Parameters
+
+Name | Description | Required?
+--------- | ------- | --------- 
+*account_id_field* | The full API name of the Salesforce field that will be used to identify the account. That field must also exist in the account object defined in the body | Yes
+*contact_id_field* | The full API name of the Salesforce field that will be used to identify the contact. That field must also exist in the contact object defined in the body | Yes
+
 > Sample Body
 
 ```json
 {
-    "client_id" : "ABCDEFG1234567",
-    "sf_account_field_id" : "Id",
-    "sf_field_id" : "unique_field__c",
+    "client_id" : "ad2d965b-57d9-4943-a879-c2a33d9a857b",
     "contact" : {
-        "sf_account_field_value" : "00158000006mkd1AAA",
-        "sf_field_value" : "ABC123456",
         "LastName" : "Jones",
         "FirstName" : "Sam",
         "Phone" : "+1 123 123 1234",
@@ -52,11 +55,7 @@ Name | Value | Required?
 Name | Data Type | Description | Required?
 --------- | --------- | ----------- | --------- 
 *client_id* | string | The unique identifier of the Saasli environment the request is destined for. This will be provisioned to you. | Yes
-*sf_account_field_id* | string | The API name of the Salesforce Account field that uniquely identifies the Account of the Contact. | Yes
-*sf_field_id* | string | The API name of the Salesforce Contact field that uniquely identifies the Contact. | Yes
-*contact* | object | The object in the request that contains the contact data. | Yes
-*sf_account_field_value* | string | The value stored by the identifying Salesforce Account field, *sf_account_field_id*. | Yes
-*sf_field_value* | string | The value stored by the identifying Salesforce Contact field, *sf_field_id*. | Yes
+*contact* | object | A key/value representation of the Salesforce field API name and it's desired value. | Yes
 *LastName* | string | The last name of the contact. This is a required Salesforce field. | Yes
 
 
@@ -67,9 +66,6 @@ You may specify as many Salesforce Contact field API names, and their correspond
 <i>LastName</i> is a required Salesforce Contact field. If one isn't specified, the request will return an error.
 <!--If one isn't specified, the newly created contact will have the last name 'Unspecified'.-->
 </aside>
-<aside class="warning">
-An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, <b>must</b> be provided. If either of the two are not specified, the request will return an error.
-</aside>
 
 
 
@@ -77,15 +73,15 @@ An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, 
 
 ```shell
 curl --request POST \
-  --url '' \
+  --url https://hjfielpxwj.execute-api.us-east-1.amazonaws.com/dev/contact/Id/Phone \
+  --header 'cache-control: no-cache' \
   --header 'content-type: application/json' \
-  --header 'x-api-key: 1234567890ABCDEFGHI' \
-  --data '{\n    "client_id" : "ABCDEFG1234567",\n    "sf_account_field_id" : "Id",\n    "sf_field_id" : "unique_field__c",\n    "contacts" : [\n        {\n            "sf_account_field_value" : "00158000006mkd1AAA",\n            "sf_field_value" : "ABC123456",\n            "LastName" : "Jones",\n\n            "FirstName" : "Sam",\n            "Phone" : "+1 123 123 1234",\n            "Custom_Field_API_Name__c" : "Value"\n        }\n    ]\n}'
+  --data '{\n    "client_id" : "saasli",\n    "account" : {\n     "Id" : "0011a00000CXH5xAAH" \n    },\n    "contact" : {\n        "LastName" : "Waites",\n        "FirstName" : "Tom",\n        "Phone" : "+1 123 123 1234"\n    }\n}'
  ```
 
 This endpoint creates, or updates, multiple Contacts within Salesforce.
 
-If a Contact cannot be found in Salesforce that matches the idenifier you specify (*sf_field_id*), a new Contact will be created with all the attributes defined in the *contacts* object in the body of the request.
+If a Contact cannot be found in Salesforce that matches the idenifier you specify (*contact_id_field*), a new Contact will be created with all the attributes defined in the *contacts* object in the body of the request.
 
 If a Contact is found in Salesforce that matches the identifier, that Contact will be updated with all the attributes defined in the *contacts* object in the body of the request.
 
@@ -142,6 +138,5 @@ You may specify as many Salesforce Contact field API names, and their correspond
 <!--If one isn't specified, the newly created contact will have the last name 'Unspecified'.-->
 </aside>
 <aside class="warning">
-An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, <b>must</b> be provided. If either of the two are not specified, the request will return an error.
-</aside>
+An <i>account_id_field</i>, and its associated value within the <i>account</i> object, <b>must</b> be provided. If either of the two are not specified, the request will return an error.
 </aside>
