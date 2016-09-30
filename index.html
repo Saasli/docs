@@ -479,15 +479,21 @@ You may specify as many Salesforce Contact field API names, and their correspond
 <p>Sample Body</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"client_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"saasli"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"account"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"Id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0011a00000CXH5xAAH"</span><span class="w"> 
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nt">"contact"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"LastName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Waites"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"FirstName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Tom"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"Phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"+1 123 123 1234"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="nt">"client_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCDEFG1234567"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"sf_account_field_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Id"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"sf_field_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"unique_field__c"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"contacts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"sf_account_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"00158000006mkd1AAA"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"sf_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC123456"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"LastName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Jones"</span><span class="p">,</span><span class="w">
+
+            </span><span class="nt">"FirstName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Sam"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"Phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"+1 123 123 1234"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"Custom_Field_API_Name__c"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Value"</span><span class="w">
+            </span><span class="err">etc.</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
