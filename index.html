@@ -436,16 +436,12 @@ You may specify as many Salesforce Contact field API names, and their correspond
 <!--If one isn't specified, the newly created contact will have the last name 'Unspecified'.-->
 </aside>
 
-<aside class="warning">
-An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, <b>must</b> be provided. If either of the two are not specified, the request will return an error.
-</aside>
-
 <h2 id="contacts">/Contacts</h2>
 <pre class="highlight shell"><code>curl --request POST <span class="se">\</span>
-  --url <span class="s1">''</span> <span class="se">\</span>
+  --url https://hjfielpxwj.execute-api.us-east-1.amazonaws.com/dev/contact/Id/Phone <span class="se">\</span>
+  --header <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
-  --header <span class="s1">'x-api-key: 1234567890ABCDEFGHI'</span> <span class="se">\</span>
-  --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_account_field_id" : "Id",\n    "sf_field_id" : "unique_field__c",\n    "contacts" : [\n        {\n            "sf_account_field_value" : "00158000006mkd1AAA",\n            "sf_field_value" : "ABC123456",\n            "LastName" : "Jones",\n\n            "FirstName" : "Sam",\n            "Phone" : "+1 123 123 1234",\n            "Custom_Field_API_Name__c" : "Value"\n        }\n    ]\n}'</span>
+  --data <span class="s1">'{\n    "client_id" : "saasli",\n    "account" : {\n     "Id" : "0011a00000CXH5xAAH" \n    },\n    "contact" : {\n        "LastName" : "Waites",\n        "FirstName" : "Tom",\n        "Phone" : "+1 123 123 1234"\n    }\n}'</span>
 </code></pre>
 
 <p>This endpoint creates, or updates, multiple Contacts within Salesforce.</p>
@@ -483,21 +479,15 @@ An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, 
 <p>Sample Body</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"client_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCDEFG1234567"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"sf_account_field_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Id"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"sf_field_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"unique_field__c"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"contacts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"sf_account_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"00158000006mkd1AAA"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"sf_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC123456"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"LastName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Jones"</span><span class="p">,</span><span class="w">
-
-            </span><span class="nt">"FirstName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Sam"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"Phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"+1 123 123 1234"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"Custom_Field_API_Name__c"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Value"</span><span class="w">
-            </span><span class="err">etc.</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
+    </span><span class="nt">"client_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"saasli"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"account"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"Id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0011a00000CXH5xAAH"</span><span class="w"> 
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"contact"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"LastName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Waites"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"FirstName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Tom"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"Phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"+1 123 123 1234"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -565,10 +555,8 @@ You may specify as many Salesforce Contact field API names, and their correspond
 </aside>
 
 <aside class="warning">
-An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, <b>must</b> be provided. If either of the two are not specified, the request will return an error.
+An <i>account_id_field</i>, and its associated value within the <i>account</i> object, <b>must</b> be provided. If either of the two are not specified, the request will return an error.
 </aside>
-
-<p></aside></p>
 
           <h1 id="account-endpoints">Account Endpoints</h1>
 
@@ -631,12 +619,10 @@ An <i>sf_account_field_id</i>, and its associated value sf_account_field_value, 
 <p>Sample Body</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"client_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCDEFG1234567"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"client_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ad2d965b-57d9-4943-a879-c2a33d9a857b"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"account"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"Name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ACME"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"Website"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.companywebsite.com"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"Custom_Field_API_Name__c"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Value"</span><span class="w">
-        </span><span class="err">etc.</span><span class="w">
+        </span><span class="nt">"Id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0011a00000DlaOMAAZ"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -676,10 +662,10 @@ You may specify as many Salesforce Account field API names, and their correspond
 
 <h2 id="accounts">/Accounts</h2>
 <pre class="highlight shell"><code>curl --request POST <span class="se">\</span>
-  --url http:// <span class="se">\</span>
+  --url https://hjfielpxwj.execute-api.us-east-1.amazonaws.com/dev/account/Id <span class="se">\</span>
   --header <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
-  --data <span class="s1">'{\n    "client_id" : "ABCDEFG1234567",\n    "sf_field_id" : "unique_field__c",\n    "accounts" : [\n      {\n        "sf_field_value" : "ABC123456",\n        "Name" : "ACME",\n\n        "Website" : "https://www.companywebsite.com",\n        "Custom_Field_API_Name__c" : "Value"\n      }\n    ]\n}'</span>
+  --data <span class="s1">'{\n    "client_id" : "ad2d965b-57d9-4943-a879-c2a33d9a857b",\n    "account" : {\n        "Name" : "ACME",\n        "Id" : "0011a00000DlaOMAAZ"\n    }\n}'</span>
 </code></pre>
 
 <p>This endpoint creates, or updates, multiple Accounts within Salesforce.</p>
