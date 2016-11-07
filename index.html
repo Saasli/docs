@@ -260,7 +260,8 @@
     </span><span class="nt">"client_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCDEFG1234567"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"sf_object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Account"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"sf_field_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Name"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"events"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="nt">"sf_lookup_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Account__c"</span><span class="w">
+    </span><span class="s2">"events"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="nt">"sf_field_value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Acme 2"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"event"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -322,6 +323,12 @@
 <td>Yes</td>
 </tr>
 <tr>
+<td><em>sf_lookup_id</em></td>
+<td>string</td>
+<td>The API name of the lookup field on the events object that will reference the triggering object.</td>
+<td>Yes</td>
+</tr>
+<tr>
 <td><em>sf_field_value</em></td>
 <td>string</td>
 <td>The value stored by the identifying Salesforce field, <em>sf_field_id</em>.</td>
@@ -338,6 +345,18 @@
 <td>number</td>
 <td>The UNIX timestamp that specifies the time at which the event was performed.</td>
 <td>Yes</td>
+</tr>
+<tr>
+<td><em>event_id</em></td>
+<td>string</td>
+<td>A unique id of the event occurence. Will be generated automatically if this is omitted. Useful for deduplication of events as any duplicate ids will be &#39;upserted&rsquo;.</td>
+<td>No</td>
+</tr>
+<tr>
+<td><em>event_values</em></td>
+<td>object</td>
+<td>Field API Name to value mappings that should also be added to the record. Useful if storing aggregate information. The data type must match the type defined in Salesforce.</td>
+<td>No</td>
 </tr>
 </tbody></table>
 
