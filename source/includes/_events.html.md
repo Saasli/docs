@@ -81,7 +81,7 @@ Name | Value | Required?
     "client_id" : "ABCDEFG1234567",
     "sf_object_id" : "Account",
     "sf_field_id" : "Name",
-    "sf_lookup_id" : "Account__c"
+    "sf_lookup_id" : "Account__c",
     "events" : [
         {
             "sf_field_value" : "Acme 2",
